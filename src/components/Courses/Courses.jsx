@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {VStack,Image, Box} from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
+import  p4 from '../../assets/images/p4.png';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 import {
   Button,
   Container,
@@ -21,36 +24,17 @@ const Course = ({
   lectureCount,
   loading,
 }) => {
+
+   useEffect(()=>{
+   
+
+   Aos.init({duration:1000});
+   },[]);
   return (
     <VStack className="course" alignItems={['center', 'flex-start']}>
       <Box padding={'4'} bg="#F3F4F6" borderRadius={'1.5rem'} >
-        <Image src={imageSrc} boxSize="60" objectFit={'contain'} borderRadius={'1.5rem'} />
-         <Heading
-        textAlign={['center', 'left']}
-        maxW="200px"
-        size={'sm'}
-        fontFamily={'sans-serif'}
-        noOfLines={3}
-        children='Project1'
-        margin={'3'}
-      />
-       <Stack direction={['column', 'row']} alignItems="center">
-        <Link to={`/course/${id}`}>
-          <Button colorScheme={'yellow'}>Preview</Button>
-        </Link>
-        
-      </Stack>
+        <Image data-aos="fade-up" src={p4}   borderRadius={'1.5rem'} />
       </Box>
-      
-     
-      
-     
-      {/* <Heading
-        size="xs"
-        children={`Views - ${views}`}
-        textTransform="uppercase"
-      /> */}
-     
     </VStack>
   );
 };
@@ -98,15 +82,23 @@ const Courses = () => {
       flexWrap={'wrap'}
       justifyContent={['center','center']}
       alignItems={['center','flex-start']}
+      gap={'2rem'}
       >
+      <Link to='/netflix'>
+      <Course/>
+      </Link>
+      <Link to='/weather'>
+      <Course/>
+      </Link>
+      <Link to='/lib'>
+      <Course/>
+      </Link>
+      <Link to='/netflix'>
+      <Course/>
+      </Link>
+     
       
-      <Course/>
-      <Course/>
-      <Course/>
-      <Course/>
-      <Course/>
-      <Course/>
-      <Course/>
+      
       </Stack>
     </Container>
   );

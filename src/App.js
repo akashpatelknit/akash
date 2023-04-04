@@ -11,6 +11,9 @@ import ForgetPassword from './components/Auth/ForgatePassword';
 import Contact from './components/Contact/Contact';
 import Request from './components/Request/Request';
 import About from './components/About/About';
+import Netflix from './components/All Projects/Netflix';
+import Lib from './components/All Projects/Lib';
+import Weather from './components/All Projects/Weather';
 function App() {
   return <Router>
     <Header/>
@@ -22,7 +25,9 @@ function App() {
       <Route path='/about' element={<About/>} />
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
-      <Route path='/request' element={<Request/>}/>
+      <Route path='/netflix' element={<Netflix/>}/>
+      <Route path='/lib' element={<Lib/>}/>
+      <Route path='/weather' element={<Weather/>}/>
       <Route path='/resetpassword/:token' element={<ResetPassword/>}/>
       <Route path='/forgetpassword/' element={<ForgetPassword/>}/>
 

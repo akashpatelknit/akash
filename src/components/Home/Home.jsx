@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {
   Box,
   Button,
@@ -6,15 +6,23 @@ import {
   HStack,
   Stack,
   Text,
-  VStack
+  VStack,
+  keyframes
 } from '@chakra-ui/react';
 import './home.css';
 import { Link } from 'react-router-dom';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 import CourseCard from '../Card/CourseCard';
 import Contact from '../Contact/Contact';
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import Textt from '../animations/Text/Text';
 const Home = () => {
+   useEffect(()=>{
+   
+
+   Aos.init({duration:1000});
+   },[]);
   return (
     <section className="home">
       <div className="container">
@@ -26,6 +34,8 @@ const Home = () => {
           spacing={['16', '7rem']}
           marginTop={['13rem','0rem']}
         >
+
+          {/* <Textt/> */}
           <VStack
             width={'full'}
             alignItems={['center', 'center']}
@@ -33,15 +43,19 @@ const Home = () => {
             marginTop={['-10rem', '5rem']}
           >
             <Heading
+              
               textAlign={'center'}
-              children="Hi, I'am Akash Patel."
+              children="Hi, I'm Akash Patel."
               size={['lg', '3xl']}
               marginBottom={'-4'}
+              data-aos="fade-left"
+              
             />
             <Heading
               textAlign={'center'}
               children=" I design, code and develope websites."
               size={['lg', '3xl']}
+              data-aos="fade-right"
             />
             <Text
               fontSize={['lg', '2xl']}
@@ -92,7 +106,12 @@ const Home = () => {
                 children='Projects'
                 />
               </Stack>
-              <Stack className="brandsBanner" width={'full'}  spacing={['10','16']}  direction={['column' ,'row']} flexWrap={'wrap'}
+              <Stack
+              direction={'column'}
+               alignItems={'center'}
+              justifyContent={'center'}
+              >
+                 <Stack className="brandsBanner" width={'full'}  spacing={['10','16']}  direction={['column' ,'row']} flexWrap={'wrap'}
               alignItems={'center'}
               justifyContent={'center'}
               // marginLeft={['-2.5rem' ,'0']}
@@ -112,16 +131,26 @@ const Home = () => {
                 </Link>
                 
               </Stack>
+                <Link to="/courses">
+              <Button size={'lg'} colorScheme="yellow" padding={'2rem'}>
+                More 
+              </Button>
+            </Link>
+
+              </Stack>
+             
               
          
 
         {/* what i do */}
         <Stack
           direction={['column','row']}
-           width={['','7xl']}
-           marginTop={'3rem'}
-           gap={'5rem'}
-          //  display={'block'}
+          //  width={['','7xl']}
+          marginTop={'7rem'}
+          gap={'5rem'}
+          alignItems={'center'}
+          justifyContent={'center'}
+          
           >
             <VStack
             alignItems={'flex-start'}
@@ -150,9 +179,11 @@ const Home = () => {
             >
               <Heading
               children='Skills'
+               color={'black'}
               />
               <Text
                 fontSize={'xl'}
+                color={'black'}
               children='HTML / CSS / JS / React / Next.js / Node.js / Express.js / Tailwind CSS / MUI / TypeScript / Figma / Adobe XD'
               />
               <Button borderRadius={'1rem'} color='white' bgColor={'black'}>Download CV</Button>
