@@ -77,6 +77,7 @@ const Courses = () => {
           </Button>
         ))}
       </HStack>
+      
       <Stack
       direction={['column','row']}
       flexWrap={'wrap'}
