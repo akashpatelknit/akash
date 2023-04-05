@@ -17,6 +17,8 @@ import Contact from '../Contact/Contact';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import Textt from '../animations/Text/Text';
+import Marquee from 'react-fast-marquee';
+import {GoPrimitiveDot} from 'react-icons/go'
 const Home = () => {
    useEffect(()=>{
    
@@ -26,6 +28,37 @@ const Home = () => {
   return (
     <section className="home">
       <div className="container">
+        <Stack
+          //  bg={'black'}
+          bg="#F3F4F6"
+          padding={'.5rem'}
+          width={'450px'}
+          margin={'auto'}
+          borderRadius={'3rem'}
+          display={['none', 'inherit']}
+          marginTop={'-1rem'}
+        >
+          <Box
+            borderRadius={'3rem'}
+          >
+            <Link>
+              <Marquee speed="100" gradientColor="none" width='450px'>
+              <GoPrimitiveDot
+              fontSize={'2rem'}
+              color='red'
+              width={'10px'}
+              />
+              <Text
+                textAlign={'center'}
+                children=" AVALIABLE FOR FREELANCE WORK"
+                size={['lg', 'xl']}
+                color={'black'}
+              />
+            </Marquee>
+            </Link>
+
+          </Box>
+        </Stack>
         <Stack
           direction={['column']}
           height="100%"
