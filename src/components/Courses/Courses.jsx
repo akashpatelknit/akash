@@ -32,8 +32,8 @@ const Course = ({
    },[]);
   return (
     <VStack className="course" alignItems={['center', 'flex-start']}>
-      <Box padding={'4'} bg="#F3F4F6" borderRadius={'1.5rem'} >
-        <Image data-aos="fade-up" src={p4}   borderRadius={'1.5rem'} />
+      <Box padding={''} bg="#F3F4F6" borderRadius={'1rem'} >
+        <Image data-aos="fade-up" src={p4}   borderRadius={'1rem'} />
       </Box>
     </VStack>
   );

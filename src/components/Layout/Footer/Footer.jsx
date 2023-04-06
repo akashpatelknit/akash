@@ -1,14 +1,14 @@
 import { Box, Heading, HStack, Stack, VStack } from '@chakra-ui/react';
 import React from 'react';
-import {
-  TiSocialYoutubeCircular,
-  TiSocialInstagramCircular,
-} from 'react-icons/ti';
-import { DiGithub } from 'react-icons/di';
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+
 const Footer = () => {
   return (
-    <Box padding={'4'} bg="blackAlpha.900" minH={'10vh'}>
-      <Stack direction={['column', 'row']}>000000
+    <Box padding={'4'}  minH={'10vh'}
+    width={['2sm','4xl']}
+    margin={'auto'}
+    >
+      <Stack direction={['column', 'row']}>
         <VStack alignItems={['center', 'flex-start']} width="full">
           <Heading children="All Rights Reserved" color={'white'} />
           <Heading
@@ -25,15 +25,22 @@ const Footer = () => {
           color={'white'}
           fontSize="50"
         >
-          <a href="/" target={'blank'}>
-            <TiSocialYoutubeCircular />
-          </a>
-          <a href="/" target={'blank'}>
-            <TiSocialInstagramCircular />
-          </a>
-          <a href="/" target={'blank'}>
-            <DiGithub />
-          </a>
+           <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'} minW={'200'}>
+              <HStack className="brandsBanner" justifyContent={'space-evenly'}>
+                <a href="/">
+                  <AiFillGithub />
+                </a>
+                <a href="/">
+                  <AiFillInstagram />
+                </a>
+                <a href="/">
+                  <AiFillLinkedin />
+                </a>
+                <a href="/">
+                  <AiFillInstagram />
+                </a>
+              </HStack>
+            </Box>
         </HStack>
       </Stack>
     </Box>

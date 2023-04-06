@@ -5,6 +5,7 @@ import { Image } from '@chakra-ui/react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import {GrShare} from 'react-icons/gr'
 import {AiFillGithub} from 'react-icons/ai'
+import Tech from '../../components/animations/TechStack/Tech'
 const image = [
 
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1J8p__I-P48ad35VVIQshwXEK2qvLmAhQpczV3sI4sg&s',
@@ -89,6 +90,7 @@ const Netflix = () => {
               size={['lg', 'md']}
             />
           </VStack>
+          
         </Stack>
       </div>
       <Stack
@@ -116,6 +118,7 @@ const Netflix = () => {
         </Masonry>
       </ResponsiveMasonry>
       </Stack>
+      <Tech/>
 
     </section>
   );

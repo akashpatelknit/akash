@@ -32,7 +32,7 @@ function App() {
       <Route path='/forgetpassword/' element={<ForgetPassword/>}/>
 
     </Routes>
-    {/* <Footer/> */}
+    <Footer/>
 
   </Router>
   

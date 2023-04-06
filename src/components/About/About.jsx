@@ -10,11 +10,11 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import React from 'react';
-
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 // import { Link } from 'react-router-dom';
 
 const Founder = () => (
-  <Stack height={'100vh'} direction={['column', 'row']} spacing={['4', '16']} padding={'8'}>
+  <Stack direction={['column']} spacing={['4', '16']} padding={'8'}>
     <VStack>
       <Avatar
         src="https://avatars.githubusercontent.com/u/86844027?s=400&u=8ce2530eb94b6f75ba6725e80f94194e3960dcec&v=4"
@@ -42,12 +42,30 @@ const About = () => {
       boxShadow={'lg'}
       marginTop={'2rem'}
     >
-      <Heading children="About Us" textAlign={['center', 'left']} />
+      <Heading children="About Me" textAlign={['center', 'left']} />
       <Founder />
-      <Stack m="" direction={['column', 'row']} alignItems="center">
+      <Stack m="" direction={['column', 'row']} alignItems="center"
+       height={'80vh'}
+      >
        
-
+         <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'} minW={'200'}>
+              <HStack className="brandsBanner" justifyContent={'space-evenly'}>
+                <a href="/">
+                  <AiFillGithub />
+                </a>
+                <a href="/">
+                  <AiFillInstagram />
+                </a>
+                <a href="/">
+                  <AiFillLinkedin />
+                </a>
+                <a href="/">
+                  <AiFillInstagram />
+                </a>
+              </HStack>
+            </Box>
       </Stack>
+     
     </Container>
   );
 };
