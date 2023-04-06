@@ -7,6 +7,7 @@ import {
   Input,
   Textarea,
   VStack,
+  Avatar
 } from '@chakra-ui/react';
 import React from 'react';
 import { useState } from 'react';
@@ -14,6 +15,7 @@ import { Link } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { contactUs } from '../../redux/actions/other';
 import { useEffect } from 'react';
+import Footer from '../Layout/Footer/Footer';
 // import toast from 'react-hot-toast';
 
 const Contact = () => {
@@ -48,8 +50,15 @@ const Contact = () => {
 
   return (
     <Container h="92vh">
-      <VStack h="full" justifyContent={'center'} spacing="16">
-        <Heading children="Contact Us" />
+      <VStack h="full" justifyContent={'center'} spacing="5"
+      
+      >
+
+        <Avatar
+        src="https://avatars.githubusercontent.com/u/86844027?s=400&u=8ce2530eb94b6f75ba6725e80f94194e3960dcec&v=4"
+        boxSize={['40', '48']}
+      />
+        <Heading children="Contact" />
 
         <form onSubmit={''} style={{ width: '100%' }}>
           <Box my={'4'}>
@@ -100,6 +109,7 @@ const Contact = () => {
           </Button>
         </form>
       </VStack>
+      {/* <Footer/> */}
     </Container>
   );
 };

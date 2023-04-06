@@ -19,6 +19,8 @@ import 'aos/dist/aos.css'
 import Textt from '../animations/Text/Text';
 import Marquee from 'react-fast-marquee';
 import {GoPrimitiveDot} from 'react-icons/go'
+import { Fade, Slide } from "react-awesome-reveal";
+import Tech from '../animations/TechStack/Tech';
 const Home = () => {
    useEffect(()=>{
    
@@ -72,7 +74,7 @@ const Home = () => {
           <VStack
             width={'full'}
             alignItems={['center', 'center']}
-            spacing={['3', '4']}
+            spacing={['7', '4']}
             marginTop={['-10rem', '5rem']}
           >
             <Heading
@@ -99,7 +101,9 @@ const Home = () => {
 
             
 
-            <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'} minW={'200'}>
+            <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'} minW={'200'}
+            
+            >
               <HStack className="brandsBanner" justifyContent={'space-evenly'}>
                 <a href="/">
                   <AiFillGithub />
@@ -115,11 +119,21 @@ const Home = () => {
                 </a>
               </HStack>
             </Box>
-            <Link to="/courses">
-              <Button size={'lg'} colorScheme="yellow" padding={'2rem'}>
+            <HStack
+            
+            >
+               <Link to="/courses">
+              <Button size={'lg'} colorScheme="yellow" padding={'1rem'} bgColor={'black'} color={'white'} borderRadius={'1rem'} width={['','150px']}>
                 Hire Me
               </Button>
             </Link>
+             <Link to="/courses">
+              <Button size={'lg'} colorScheme="yellow" padding={'1rem'} bgColor={'black'} color={'white'}borderRadius={'1rem'} >
+                Download CV
+              </Button>
+            </Link>
+            </HStack>
+           
 
            
           </VStack>
@@ -144,7 +158,7 @@ const Home = () => {
                alignItems={'center'}
               justifyContent={'center'}
               >
-                 <Stack className="brandsBanner" width={'full'}  spacing={['10','16']}  direction={['column' ,'row']} flexWrap={'wrap'}
+                 <Stack className="brandsBanner" width={'full'}  spacing={['10','']}  direction={['column' ,'row']} flexWrap={'wrap'}
               alignItems={'center'}
               justifyContent={'center'}
               // marginLeft={['-2.5rem' ,'0']}
@@ -165,7 +179,7 @@ const Home = () => {
                 
               </Stack>
                 <Link to="/courses">
-              <Button size={'lg'} colorScheme="yellow" padding={'2rem'}>
+              <Button size={'lg'} colorScheme="black" padding={'1rem'}>
                 More 
               </Button>
             </Link>
@@ -180,7 +194,7 @@ const Home = () => {
           direction={['column','row']}
           //  width={['','7xl']}
           marginTop={'7rem'}
-          gap={'5rem'}
+          // gap={'5rem'}
           alignItems={'center'}
           justifyContent={'center'}
           
@@ -203,27 +217,29 @@ const Home = () => {
               />
             </VStack>
             <VStack
-           alignItems={'flex-start'}
+           alignItems={'center'}
             width={['','7xl']}
-            bg="#F3F4F6"
-             padding={'4'}
+            // bg="#F3F4F6"
+             padding={''}
             borderRadius={'2rem'}
-            spacing={'5'}
+            spacing={''}
             >
-              <Heading
+              {/* <Heading
               children='Skills'
                color={'black'}
-              />
-              <Text
+              /> */}
+              {/* <Text
                 fontSize={'xl'}
                 color={'black'}
               children='HTML / CSS / JS / React / Next.js / Node.js / Express.js / Tailwind CSS / MUI / TypeScript / Figma / Adobe XD'
-              />
-              <Button borderRadius={'1rem'} color='white' bgColor={'black'}>Download CV</Button>
+              /> */}
+               <Tech/>
+              {/* <Button borderRadius={'1rem'} color='white' bgColor={'black'}>Download CV</Button> */}
             </VStack>
           </Stack>
        <Contact/>
       </div>
+       {/* <Tech/> */}
     </section>
   );
 };
