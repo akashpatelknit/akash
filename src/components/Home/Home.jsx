@@ -247,7 +247,7 @@ const Home = () => {
           marginTop={'5rem'}
           >
             <Contact/>
-            <Testimonial/>
+            {/* <Testimonial/> */}
           </Stack>
           
 
