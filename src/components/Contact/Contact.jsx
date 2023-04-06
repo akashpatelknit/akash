@@ -7,7 +7,7 @@ import {
   Input,
   Textarea,
   VStack,
-  Avatar
+  Avatar,
 } from '@chakra-ui/react';
 import React from 'react';
 import { useState } from 'react';
@@ -50,14 +50,13 @@ const Contact = () => {
 
   return (
     <Container h="92vh">
-      <VStack h="full" justifyContent={'center'} spacing="5"
       
-      >
-
+      <VStack h="full" justifyContent={'center'} spacing="5">
         <Avatar
-        src="https://avatars.githubusercontent.com/u/86844027?s=400&u=8ce2530eb94b6f75ba6725e80f94194e3960dcec&v=4"
-        boxSize={['40', '48']}
-      />
+          src="https://avatars.githubusercontent.com/u/86844027?s=400&u=8ce2530eb94b6f75ba6725e80f94194e3960dcec&v=4"
+          boxSize={['40', '48']}
+        />
+
         <Heading children="Contact" />
 
         <form onSubmit={''} style={{ width: '100%' }}>
@@ -109,7 +108,6 @@ const Contact = () => {
           </Button>
         </form>
       </VStack>
-      {/* <Footer/> */}
     </Container>
   );
 };

@@ -19,8 +19,10 @@ import 'aos/dist/aos.css'
 import Textt from '../animations/Text/Text';
 import Marquee from 'react-fast-marquee';
 import {GoPrimitiveDot} from 'react-icons/go'
+import {AiOutlineArrowRight} from 'react-icons/ai'
 import { Fade, Slide } from "react-awesome-reveal";
 import Tech from '../animations/TechStack/Tech';
+import Testimonial from '../Testomonial/Testimonial';
 const Home = () => {
    useEffect(()=>{
    
@@ -96,6 +98,7 @@ const Home = () => {
               fontSize={['lg', '2xl']}
               width={['', '700px']}
               textAlign={['center', 'center']}
+              color={'#8D8D8D'}
               children="I'm a Full Stack Developer and Programmer who enjoys turning problems and opportunities into simple interface through design and code."
             />
 
@@ -158,11 +161,9 @@ const Home = () => {
                alignItems={'center'}
               justifyContent={'center'}
               >
-                 <Stack className="brandsBanner" width={'full'}  spacing={['10','']}  direction={['column' ,'row']} flexWrap={'wrap'}
+              <Stack className="brandsBanner" width={'full'}  spacing={['10','']}  direction={['column' ,'row']} flexWrap={'wrap'}
               alignItems={'center'}
               justifyContent={'center'}
-              // marginLeft={['-2.5rem' ,'0']}
-              // margin={'auto'}
               >
                 <Link to='/courses' >
                    <CourseCard/>
@@ -176,13 +177,18 @@ const Home = () => {
                 <Link to='/courses'>
                    <CourseCard/>
                 </Link>
-                
+                <Link to='/courses'>
+                   <Button
+                   size={'lg'} colorScheme="yellow" padding={'1rem'} bgColor={'black'} color={'white'}borderRadius={'1rem'}
+                   >More <AiOutlineArrowRight/></Button>
+                </Link>
               </Stack>
-                <Link to="/courses">
-              <Button size={'lg'} colorScheme="black" padding={'1rem'}>
-                More 
-              </Button>
-            </Link>
+
+              <Link to="/courses">
+                <Button size={'lg'} colorScheme="black" padding={'1rem'}>
+                  More 
+                </Button>
+              </Link>
 
               </Stack>
              
@@ -192,9 +198,9 @@ const Home = () => {
         {/* what i do */}
         <Stack
           direction={['column','row']}
-          //  width={['','7xl']}
-          marginTop={'7rem'}
-          // gap={'5rem'}
+         
+          marginTop={['1rem','7rem']}
+         
           alignItems={'center'}
           justifyContent={'center'}
           
@@ -204,8 +210,8 @@ const Home = () => {
             width={['','7xl']}
             justifyContent={'center'}
             spacing={'5'}
-            padding={'4'}
             borderRadius={'2rem'}
+            marginLeft={['','10rem']}
             >
               <Heading
                textAlign={['center', '']}
@@ -213,31 +219,38 @@ const Home = () => {
               />
               <Text 
               fontSize={'xl'}
+              color={'#8D8D8D'}
               children='Design, strategy, management, creative direction, & development are my specialities, and I have had nearly a decade honing in my skills. In all my project, I find that efficient work - flows, excellent communication skills and a dose of self-discipline are key - a strong work ethic has driven my success in a myriad of specialties.'
               />
             </VStack>
             <VStack
-           alignItems={'center'}
-            width={['','7xl']}
-            // bg="#F3F4F6"
-             padding={''}
-            borderRadius={'2rem'}
-            spacing={''}
+              alignItems={'center'}
+              width={['','7xl']}
+              
+              borderRadius={'2rem'}
             >
-              {/* <Heading
-              children='Skills'
-               color={'black'}
-              /> */}
-              {/* <Text
-                fontSize={'xl'}
-                color={'black'}
-              children='HTML / CSS / JS / React / Next.js / Node.js / Express.js / Tailwind CSS / MUI / TypeScript / Figma / Adobe XD'
-              /> */}
+              <Stack
+              bg={['','#F3F4F6']}
+              borderRadius={'20%'}
+              height={['50vh']}
+             
+              
+              boxShadow='rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px'
+              data-aos="zoom-in"
+              >
                <Tech/>
-              {/* <Button borderRadius={'1rem'} color='white' bgColor={'black'}>Download CV</Button> */}
+              </Stack>
+             
             </VStack>
           </Stack>
-       <Contact/>
+          <Stack
+          marginTop={'5rem'}
+          >
+            <Contact/>
+            <Testimonial/>
+          </Stack>
+          
+
       </div>
        {/* <Tech/> */}
     </section>

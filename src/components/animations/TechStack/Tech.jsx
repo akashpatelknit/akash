@@ -68,7 +68,7 @@ const Tech = () => {
        <Heading
               children='Skills'
               fontSize={'2xl'}
-               color={'black'}
+              
               />
     </div>
   </div>
