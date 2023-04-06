@@ -38,7 +38,7 @@ const Home = () => {
           margin={'auto'}
           borderRadius={'3rem'}
           display={['none', 'inherit']}
-          marginTop={'-1rem'}
+          marginTop={'-3rem'}
         >
           <Box
             borderRadius={'3rem'}

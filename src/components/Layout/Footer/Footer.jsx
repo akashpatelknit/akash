@@ -4,8 +4,8 @@ import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
 const Footer = () => {
   return (
-    <Box padding={'4'} bg={'blackAlpha.800'} minH={'10vh'}
-    width={['2sm','3xl']}
+    <Box padding={'4'}  minH={'10vh'}
+    width={['2sm','4xl']}
     margin={'auto'}
     >
       <Stack direction={['column', 'row']}>
