@@ -4,13 +4,13 @@ import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
 const Footer = () => {
   return (
-    <Box padding={'4'}  minH={'10vh'}
-    width={['2sm','4xl']}
+    <Box padding={'1'}  minH={'10vh'}
+    width={['','4xl']}
     margin={'auto'}
     >
       <Stack direction={['column', 'row']}>
         <VStack alignItems={['center', 'flex-start']} width="full">
-          <Heading children="All Rights Reserved" color={'white'} />
+          <Heading children="All Rights Reserved"  />
           <Heading
             fontFamily={'body'}
             size="sm"
@@ -22,7 +22,6 @@ const Footer = () => {
         <HStack
           spacing={['2', '10']}
           justifyContent="center"
-          color={'white'}
           fontSize="50"
         >
            <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'} minW={'200'}>
