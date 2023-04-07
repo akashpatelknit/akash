@@ -153,7 +153,7 @@ const tech=[<AiFillHtml5/>,<IoLogoCss3/>,<DiReact/>]
           templateColumns={['repeat(1, 1fr)', 'repeat(3, 1fr)']}
           gap={6}
           // marginLeft={['3rem', '3rem']}
-          width={['250px','1200px']}
+          width={['245px','1200px']}
        
         margin={'auto'}
           
