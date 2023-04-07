@@ -42,7 +42,7 @@ const Courses = () => {
         templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)']}
         gap={6}
         // marginLeft={['2rem', '3rem','6rem']}
-        width={['250px','800px']}
+        width={['245px','800px']}
        
         margin={'auto'}
       >
