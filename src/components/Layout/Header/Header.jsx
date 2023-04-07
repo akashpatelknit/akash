@@ -5,11 +5,9 @@ import {
   Drawer,
   DrawerBody,
   DrawerContent,
-  DrawerHeader,
   DrawerOverlay,
   HStack,
   VStack,
-  
   useDisclosure,
 } from '@chakra-ui/react';
 import { RiDashboard2Fill, RiLoginBoxLine, RiMenu5Fill } from 'react-icons/ri';
@@ -45,13 +43,14 @@ const Header = () => {
         position={'fixed'}
         top={'6'}
         left={'6'}
-        colorScheme="yellow"
+        colorScheme='linkedin'
         onClick={onOpen}
+        // fontSize={'1.3rem'}
       >
         <RiMenu5Fill />
       </Button>
 
-      <Drawer placement='left' isOpen={isOpen} onClose={onClose}>
+      <Drawer placement='left' isOpen={isOpen} onClose={onClose} >
         <DrawerOverlay />
         <DrawerContent>
           <DrawerBody>

@@ -11,13 +11,6 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { contactUs } from '../../redux/actions/other';
-import { useEffect } from 'react';
-import Footer from '../Layout/Footer/Footer';
-// import toast from 'react-hot-toast';
-
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -101,7 +94,7 @@ const Contact = () => {
           <Button
             // isLoading={loading}
             my="4"
-            colorScheme={'yellow'}
+            colorScheme={'linkedin'}
             type="submit"
           >
             Send Mail
