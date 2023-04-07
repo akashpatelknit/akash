@@ -8,11 +8,11 @@ import {AiFillGithub} from 'react-icons/ai'
 import Tech from '../../components/animations/TechStack/Tech'
 const image = [
 
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1J8p__I-P48ad35VVIQshwXEK2qvLmAhQpczV3sI4sg&s',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1J8p__I-P48ad35VVIQshwXEK2qvLmAhQpczV3sI4sg&s',
+  'https://cdn.mos.cms.futurecdn.net/rDJegQJaCyGaYysj2g5XWY.jpg',
+  // 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5RA8laHb3fJhLqiSd-mDdb9gnm0jLqmrMuCfelLfz0w&s',
 
-
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1J8p__I-P48ad35VVIQshwXEK2qvLmAhQpczV3sI4sg&s',
+  'https://media.designrush.com/inspiration_images/134557/conversions/_1505427129_791_netflix.001-preview.jpg',
+  
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1J8p__I-P48ad35VVIQshwXEK2qvLmAhQpczV3sI4sg&s',
 
 
@@ -50,6 +50,14 @@ const Netflix = () => {
               textAlign={'center'}
               children="I'm a Full Stack Developer and Programmer who enjoys turning problems and opportunities into simple interface through design and code."
             />
+             <Image
+                src='https://i.pinimg.com/originals/25/ae/6c/25ae6c3bbc39e96c2948e863e6fe61c4.gif'
+                objectFit={'cover'}
+                borderRadius={'1rem'}
+                boxSize={['248px', '200px']}
+                borderRight={'1rem'}
+                // margin={'auto'}
+              />
             <a href="/#">project link</a>
           </VStack>
           <VStack
@@ -71,10 +79,10 @@ const Netflix = () => {
             />
             <HStack>
               <a href="/">
-                <Button >Live Link <GrShare/></Button>
+                <Button colorScheme='linkedin'  minW={['40', '40']}>Live Link <GrShare/></Button>
               </a>
               <a href="/">
-                <Button>GitHub <AiFillGithub/></Button>
+                <Button colorScheme='linkedin'  minW={['40', '40']}>GitHub <AiFillGithub/></Button>
               </a>
             </HStack>
           </VStack>
@@ -95,8 +103,6 @@ const Netflix = () => {
       </div>
       <Stack
       justifyContent={'center'}
-      // alignItems={'center'}
-      // marginLeft={['','15rem']}
       width={['','4xl']}
       margin={'auto'}
       >

@@ -1,65 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import {VStack,Image, Box} from '@chakra-ui/react'
+import { Grid, GridItem } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import  p4 from '../../assets/images/p4.png';
-import Aos from 'aos';
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
 import {
   Button,
   Container,
   HStack,
   Heading,
   Input,
-  Stack,
   Text,
 } from '@chakra-ui/react';
-const Course = ({
-  views,
-  title,
-  imageSrc,
-  id,
-  addToPlaylistHandler,
-  creator,
-  description,
-  lectureCount,
-  loading,
-}) => {
 
-   useEffect(()=>{
-   
-
-   Aos.init({duration:1000});
-   },[]);
-  return (
-    <VStack className="course" alignItems={['center', 'flex-start']}>
-      <Box padding={''} bg="#F3F4F6" borderRadius={'1rem'} >
-        <Image data-aos="fade-up" src={p4}   borderRadius={'1rem'} />
-      </Box>
-    </VStack>
-  );
-};
+import CourseCard from '../Card/CourseCard';
 const Courses = () => {
-  const categories = [
-    'All',
-    'React',
-    'API',
-    'MERN',
-  ];
-  const [keyword, setKeyword] = useState('');
-  const [category, setCategory] = useState('');
+  const categories = ['All', 'Industary', 'React', 'API', 'MERN'];
   return (
     <Container minH={'95vh'} maxW={'container.lg'} paddingY={'8'}>
       <Heading children="All Projects" m={'8'} textAlign={'center'} />
       <Input
-        value={keyword}
-        onChange={e => setKeyword(e.target.value)}
         placeholder="Search a project"
         type="text"
-        // focusBorderColor='yellow.200'
+        focusBorderColor="blue.200"
       />
       <HStack
         overflowX={'auto'}
-        padding={'8'}
+        padding={'9'}
+        gap={['', '1rem']}
+        ml={['', '2rem']}
         css={{
           '&::-webkit-scrollbar': {
             display: 'none',
@@ -67,39 +33,53 @@ const Courses = () => {
         }}
       >
         {categories.map((item, index) => (
-          <Button
-            key={index}
-           
-            minW={'35'}
-            onClick={e => setCategory(e.target.value)}
-          >
+          <Button key={index} minW={['20', '40']}>
             <Text children={item} textAlign={'center'} />
           </Button>
         ))}
       </HStack>
-      <Stack
-      direction={['column','row']}
-      flexWrap={'wrap'}
-      justifyContent={['center','center']}
-      alignItems={['center','flex-start']}
-      gap={'2rem'}
+      <Grid
+        templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)']}
+        gap={6}
+        marginLeft={['2rem', '6rem']}
       >
-      <Link to='/netflix'>
-      <Course/>
-      </Link>
-      <Link to='/weather'>
-      <Course/>
-      </Link>
-      <Link to='/lib'>
-      <Course/>
-      </Link>
-      <Link to='/netflix'>
-      <Course/>
-      </Link>
-     
-      
-      
-      </Stack>
+        <GridItem>
+          <Link to="/netflix">
+            <CourseCard
+              src="https://i.pinimg.com/originals/25/ae/6c/25ae6c3bbc39e96c2948e863e6fe61c4.gif"
+              title="Netflix Clone"
+              colour="red"
+            />
+          </Link>
+        </GridItem>
+        <GridItem>
+          <Link to="/weather">
+            <CourseCard
+              src="https://i.pinimg.com/originals/79/35/fd/7935fdf1fe2c5dd8205de03a214befb0.gif"
+              title="Weather App"
+              colour="black"
+            />
+          </Link>
+        </GridItem>
+        <GridItem>
+          <Link to="/lib">
+            <CourseCard
+              src="https://cdn.dribbble.com/users/686119/screenshots/2435023/untitled.gif"
+              title="My Library"
+              colour="black"
+            />
+          </Link>
+        </GridItem>
+        <GridItem>
+          <Link to="/otm">
+            <CourseCard
+              src="https://onix-systems.com/_next/image?url=https%3A%2F%2Fcdn.onix-systems.com%2Fstatic%2Fimages%2FPages%2FFitnessApp%2Frunning_woman.gif&w=640&q=75"
+              title="Onthemove"
+              colour="black"
+            />
+          </Link>
+        </GridItem>
+      </Grid>
     </Container>
   );
 };

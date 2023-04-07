@@ -1,7 +1,6 @@
 import React from 'react';
 import './tech.css'
 import {Heading} from '@chakra-ui/react'
-import {AiFillGithub} from 'react-icons/ai'
 import {
   github,
   css,
@@ -12,9 +11,6 @@ import {
   nodejs,
   reactjs,
   redux,
-  tailwind,
-  typescript,
- 
 } from './photos/index'
 const Tech = () => {
   return (
