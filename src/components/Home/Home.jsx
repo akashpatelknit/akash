@@ -159,30 +159,29 @@ const tech=[<AiFillHtml5/>,<IoLogoCss3/>,<DiReact/>]
           
         >
           <GridItem>
-            <Link to="/otm">
+          
               <CourseCard src='https://onix-systems.com/_next/image?url=https%3A%2F%2Fcdn.onix-systems.com%2Fstatic%2Fimages%2FPages%2FFitnessApp%2Frunning_woman.gif&w=640&q=75' title='Onthemove' colour='black' link='/otm' />
-            </Link>
+           
           </GridItem>
           <GridItem>
-            <Link to="/netflix">
+           
              <CourseCard src='https://i.pinimg.com/originals/25/ae/6c/25ae6c3bbc39e96c2948e863e6fe61c4.gif' title='Netflix Clone' color='red'
               link='/netflix'    />
              
-            </Link>
+          
           </GridItem>
           <GridItem >
-            <Link to="/weather">
+           
                <CourseCard src='https://i.pinimg.com/originals/79/35/fd/7935fdf1fe2c5dd8205de03a214befb0.gif' title='Weather App'color=''
                link='/weather'
                 />
-            </Link>
+           
           </GridItem>
           <GridItem>
-            <Link to="/lib">
-              <Link to="/courses">
-              <CourseCard src='https://cdn.dribbble.com/users/686119/screenshots/2435023/untitled.gif' title='My Library' colour=''/>
-            </Link>
-            </Link>
+           
+              
+              <CourseCard src='https://cdn.dribbble.com/users/686119/screenshots/2435023/untitled.gif' title='My Library' colour='' link='/lib'/>
+          
           </GridItem>
           <GridItem
           
