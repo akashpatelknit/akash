@@ -1,6 +1,9 @@
 import React from 'react';
-import './tech.css'
-import {Heading} from '@chakra-ui/react'
+// import './tech.css'
+import './float.css';
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import { Heading } from '@chakra-ui/react';
 import {
   github,
   css,
@@ -11,64 +14,146 @@ import {
   nodejs,
   reactjs,
   redux,
-} from './photos/index'
+  cpp,
+  js,
+  bootstrap,
+  react,
+  gitHub,
+  scss,
+  vscode,
+  postman,
+} from './photos/index';
 const Tech = () => {
+  const dragConstraints = {
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+  };
+
   return (
     <>
-   <section class="main-container">
-  <div class="main">
-    <div class="big-circle">
-      <div class="icon-block">
-        {/* <AiFillGithub/> */}
-        <img src={html} alt="" />
-      </div>
-      <div class="icon-block"  >
-        <img src={javascript} alt="game design icon" />
-      </div>
-      <div class="icon-block">
-        <img src={reactjs} alt="game dev icon" />
-      </div>
-      <div class="icon-block">
-        <img src={mongodb} alt="ui-ux icon" />
-      </div>
-      <div class="icon-block">
-        <img src={redux} alt="ui-ux icon" />
-      </div>
-      <div class="icon-block">
-        <img src={redux} alt="ui-ux icon" />
-      </div>
-      <div class="icon-block">
-        <img src={redux} alt="ui-ux icon" />
-      </div>
-      <div class="icon-block">
-        <img src={redux} alt="ui-ux icon" />
-      </div>
-    </div>
+      <section class="body">
+        <motion.div className="container-float">
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            whileTap={{ cursor: 'grabbing' }}
+            src={html}
+            alt=""
+          />
 
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={css}
+            alt=""
+          />
 
-    <div class="circle">
-      <div class="icon-block">
-        <img src={css} alt="app icon" />
-      </div>
-      <div class="icon-block">
-        <img src={git} alt="blockchain icon" />
-      </div>
-      <div class="icon-block">
-        <img src={nodejs} alt="ar-vr icon" />
-      </div>
-      <div class="icon-block">
-        <img src={github} alt="artificial intelligence icon" />
-      </div>
-    </div>
-    <div class="center-logo">
-       <Heading
-              children='Skills'
-              fontSize={'2xl'}
-              
-              />
-    </div>
-  </div>
-</section>
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={javascript}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={mongodb}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={reactjs}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={git}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={redux}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={nodejs}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={gitHub}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={react}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={vscode}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={js}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={cpp}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={postman}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={bootstrap}
+            alt=""
+          />
+          <motion.img
+            className="item"
+            drag
+            dragConstraints={dragConstraints}
+            src={scss}
+            alt=""
+          />
+        </motion.div>
+
+        {/* <motion.img className="item" drag dragConstraints={constraintsRef} src={javascript} alt=""/> */}
+      </section>
     </>
   );
 };

@@ -9,13 +9,37 @@ import {
   Grid,
   GridItem,
 } from '@chakra-ui/react';
+import {
+  github,
+  css,
+  git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
+  reactjs,
+  redux,
+  cpp,
+  js,
+  bootstrap,
+  react,
+  gitHub,
+  scss,
+  vscode,
+  postman,
+} from '../animations/TechStack/photos/index';
 import { Link } from 'react-router-dom';
-import { IoLogoCss3 } from 'react-icons/io';
-import { AiFillHtml5 } from 'react-icons/ai';
-// import { DiReact } from 'react-icons/di';
-// import {BiLink} from 'react-icons/bi'
-// import {AiFillApi} from 'react-icons/ai'
 const CourseCard = ({ title, src, color, link }) => {
+let image=[];
+ if(title==='Netflix Clone'){
+  image=[react,postman, gitHub,javascript,vscode];
+ }else if(title==='Onthemove'){
+   image=[html,gitHub,javascript,nodejs];
+ }else if(title==='Weather App'){
+   image=[react,gitHub,javascript,vscode];
+ }else if(title==='My Library'){
+   image=[react,gitHub,javascript,mongodb];
+ }
   return (
     <Stack>
       <Link to={link}>
@@ -63,38 +87,12 @@ const CourseCard = ({ title, src, color, link }) => {
                       marginLeft={['1.5rem', '']}
                       mb={['1', '']}
                     >
-                      {/* {techh.map((item, index) => {
-                        return <GridItem borderRadius={'50%'}key={index} padding={'4px'}>
-                          {item}
-                        </GridItem>
-                      })} */}
-                      <GridItem borderRadius={'50%'} padding={'4px'}>
-                        <AiFillHtml5 />
+                      {image.map((item, index) => {
+                        return <GridItem borderRadius={'50%'} padding={'4px'}>
+                        <img src={item} alt="" />
                       </GridItem>
-                      <GridItem
-                        // bg={'skyblue'}
-                        borderRadius={'50%'}
-                        padding={'4px'}
-                      >
-                        <IoLogoCss3 color="blue" />
-                      </GridItem>
-                      <GridItem
-                        // bg={'skyblue'}
-                        borderRadius={'50%'}
-                        padding={'4px'}
-                      >
-                        <IoLogoCss3 color="blue" />
-                      </GridItem>
-                      <GridItem
-                        // bg={'skyblue'}
-                        borderRadius={'50%'}
-                        padding={'4px'}
-                      >
-                        <AiFillHtml5 color="red" />
-                      </GridItem>
-                      <GridItem borderRadius={'50%'} padding={'4px'}>
-                        <AiFillHtml5 color="red" />
-                      </GridItem>
+                      })}
+                     
                     </Grid>
                   </HStack>
                 </VStack>

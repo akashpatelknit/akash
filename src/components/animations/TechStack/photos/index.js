@@ -26,8 +26,25 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
-export {
+import cpp from './tech/icons8-c++-48.png'
+import js from './tech/icons8-javascript.gif'
+import bootstrap from './tech/icons8-bootstrap-48.png'
+import react from './tech/icons8-react-50.png'
+import gitHub from './tech/icons8-github-100.png'
+import scss from './tech/icons8-sass-avatar-48.png'
+import vscode from './tech/icons8-visual-studio-code-2019-48.png'
+import postman from './tech/icons8-postman-api-64.png'
 
+
+export {
+ cpp,
+ js,
+ bootstrap,
+ react,
+ gitHub,
+ scss,
+ vscode,
+ postman,
   backend,
   creator,
   mobile,
