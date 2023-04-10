@@ -19,9 +19,10 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Marquee from 'react-fast-marquee';
 import { GoPrimitiveDot } from 'react-icons/go';
-import { AiOutlineArrowRight,AiFillHtml5 } from 'react-icons/ai';
+import { AiOutlineArrowRight,AiFillHtml5,AiFillTwitterCircle } from 'react-icons/ai';
 import Tech from '../animations/TechStack/Tech';
 import { IoLogoCss3 } from 'react-icons/io';
+
 
 import { DiReact } from 'react-icons/di';
 
@@ -95,17 +96,17 @@ const tech=[<AiFillHtml5/>,<IoLogoCss3/>,<DiReact/>]
 
             <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'} minW={'200'}>
               <HStack className="brandsBanner" justifyContent={'space-evenly'}>
-                <a href="/">
+                <a href="https://github.com/akashpatelknit" target=''>
                   <AiFillGithub />
                 </a>
-                <a href="/">
+                <a href="https://www.instagram.com/akashknitian_/">
                   <AiFillInstagram />
                 </a>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/akash-patel-9330aa201/">
                   <AiFillLinkedin />
                 </a>
-                <a href="/">
-                  <AiFillInstagram />
+                <a href="https://twitter.com/AkashPa61475055">
+                  <AiFillTwitterCircle />
                 </a>
               </HStack>
             </Box>
@@ -218,7 +219,7 @@ const tech=[<AiFillHtml5/>,<IoLogoCss3/>,<DiReact/>]
             borderRadius={'2rem'}
             marginLeft={['', '3rem']}
           >
-            <Heading textAlign={['center', '']} children="Things I Do" />
+            <Heading textAlign={['center', '']} children="Things I Do" mt={['4rem','']} />
             <Text
               fontSize={'xl'}
               color={'#8D8D8D'}
@@ -229,24 +230,25 @@ const tech=[<AiFillHtml5/>,<IoLogoCss3/>,<DiReact/>]
             alignItems={'center'}
             width={['', '7xl']}
             borderRadius={'2rem'}
+            
           >
+            <Heading marginRight={'13rem'} mt={['4rem','']} children="Skills" />
             <Stack
-              bg={['', '#F3F4F6']}
-              borderRadius={'20%'}
-              height={['50vh']}
+              
+              borderRadius={'2rem'}
+              borderTopLeftRadius={['','0']}
               boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
               data-aos="zoom-in"
+              
             >
               <Tech />
             </Stack>
           </VStack>
+
         </Stack>
-        <Stack marginTop={'5rem'}>
-          <Contact />
-          {/* <Testimonial/> */}
-        </Stack>
+       
       </div>
-      {/* <Tech/> */}
+   
     </section>
   );
 };
