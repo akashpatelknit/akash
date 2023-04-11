@@ -10,18 +10,10 @@ import {
   GridItem,
 } from '@chakra-ui/react';
 import {
-  github,
-  css,
-  git,
   html,
   javascript,
   mongodb,
   nodejs,
-  reactjs,
-  redux,
-  cpp,
-  js,
-  bootstrap,
   react,
   gitHub,
   scss,
@@ -29,17 +21,18 @@ import {
   postman,
 } from '../animations/TechStack/photos/index';
 import { Link } from 'react-router-dom';
+
 const CourseCard = ({ title, src, color, link }) => {
-let image=[];
- if(title==='Netflix Clone'){
-  image=[react,postman, gitHub,javascript,vscode];
- }else if(title==='Onthemove'){
-   image=[html,gitHub,javascript,nodejs];
- }else if(title==='Weather App'){
-   image=[react,gitHub,javascript,vscode];
- }else if(title==='My Library'){
-   image=[react,gitHub,javascript,mongodb];
- }
+  let image = [];
+  if (title === 'Netflix Clone') {
+    image = [react, postman, gitHub, javascript, vscode,scss];
+  } else if (title === 'Onthemove') {
+    image = [html, gitHub, javascript, nodejs];
+  } else if (title === 'Weather App') {
+    image = [react, gitHub, javascript, vscode];
+  } else if (title === 'My Library') {
+    image = [react, gitHub, javascript, mongodb];
+  }
   return (
     <Stack>
       <Link to={link}>
@@ -47,12 +40,10 @@ let image=[];
           className="course"
           alignItems={['center', 'center']}
           borderRadius={'1rem'}
-          // bg={'GrayText'}
         >
           <Box
             padding={''}
             borderRadius={'1.5rem'}
-            // bg={['#F3F4F6','#F3F4F6']}
             justifyContent={'center'}
             alignItems={'center'}
             width={['', '350px']}
@@ -67,7 +58,6 @@ let image=[];
                 borderTopRightRadius={['', '0rem']}
                 borderBottomLeftRadius={['1rem', '1rem']}
                 borderBottomRightRadius={['1rem', '0rem']}
-                // margin={'auto'}
               />
               <VStack padding={''} justifyContent={'space-evenly'} mt={'3'}>
                 <Heading
@@ -88,11 +78,12 @@ let image=[];
                       mb={['1', '']}
                     >
                       {image.map((item, index) => {
-                        return <GridItem borderRadius={'50%'} padding={'4px'}>
-                        <img src={item} alt="" />
-                      </GridItem>
+                        return (
+                          <GridItem borderRadius={'50%'} padding={'4px'}>
+                            <img src={item} alt="" />
+                          </GridItem>
+                        );
                       })}
-                     
                     </Grid>
                   </HStack>
                 </VStack>

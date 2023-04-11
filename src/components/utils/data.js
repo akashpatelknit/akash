@@ -1,0 +1,38 @@
+import {
+  css,
+  git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
+  reactjs,
+  redux,
+  cpp,
+  js,
+  bootstrap,
+  react,
+  gitHub,
+  scss,
+  vscode,
+  postman,
+} from '../animations/TechStack/photos/index';
+
+ exports.icon= [
+  css,
+  git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
+  reactjs,
+  redux,
+  cpp,
+  js,
+  bootstrap,
+  react,
+  gitHub,
+  scss,
+  vscode,
+  postman,
+];
+

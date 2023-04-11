@@ -5,17 +5,19 @@ import { AiFillGithub, AiFillInstagram, AiFillLinkedin,AiFillTwitterCircle } fro
 const Footer = () => {
   return (
     <Box padding={'1'}  minH={'10vh'}
-    width={['','4xl']}
+    width={['','full']}
     margin={'auto'}
+ 
+    mt={['2rem','']}
     >
       <Stack direction={['column', 'row']}>
-        <VStack alignItems={['center', 'flex-start']} width="full">
+        <VStack alignItems={['center', 'center']} width="full">
           <Heading children="All Rights Reserved"  />
           <Heading
             fontFamily={'body'}
             size="sm"
             children="@Akash Patel"
-            color={'yellow.400'}
+            
           />
         </VStack>
 
@@ -24,8 +26,12 @@ const Footer = () => {
           justifyContent="center"
           fontSize="50"
         >
-           <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'} minW={'200'}>
-              <HStack className="brandsBanner" justifyContent={'space-evenly'}>
+           <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'} minW={'200'}
+           mr={['','17rem']}
+           >
+              <HStack className="brandsBanner" justifyContent={'space-evenly'}
+             
+              >
                 <a href="https://github.com/akashpatelknit" target=''>
                   <AiFillGithub />
                 </a>

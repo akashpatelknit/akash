@@ -14,20 +14,14 @@ import './home.css';
 import { Link } from 'react-router-dom';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 import CourseCard from '../Card/CourseCard';
-import Contact from '../Contact/Contact';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Marquee from 'react-fast-marquee';
 import { GoPrimitiveDot } from 'react-icons/go';
-import { AiOutlineArrowRight,AiFillHtml5,AiFillTwitterCircle } from 'react-icons/ai';
+import { AiOutlineArrowRight,AiFillTwitterCircle } from 'react-icons/ai';
 import Tech from '../animations/TechStack/Tech';
-import { IoLogoCss3 } from 'react-icons/io';
-
-
-import { DiReact } from 'react-icons/di';
-
 const Home = () => {
-const tech=[<AiFillHtml5/>,<IoLogoCss3/>,<DiReact/>]
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -35,7 +29,6 @@ const tech=[<AiFillHtml5/>,<IoLogoCss3/>,<DiReact/>]
     <section className="home">
       <div className="container">
         <Stack
-          //  bg={'black'}
           bg="#F3F4F6"
           padding={'.5rem'}
           width={'450px'}
@@ -66,7 +59,6 @@ const tech=[<AiFillHtml5/>,<IoLogoCss3/>,<DiReact/>]
           spacing={['16', '7rem']}
           marginTop={['13rem', '0rem']}
         >
-          {/* <Textt/> */}
           <VStack
             width={'full'}
             alignItems={['center', 'center']}
