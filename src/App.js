@@ -9,6 +9,7 @@ import About from './components/About/About';
 import Netflix from './components/All Projects/Netflix';
 import Lib from './components/All Projects/Lib';
 import Weather from './components/All Projects/Weather';
+import OTM from './components/All Projects/OTM'
 function App() {
   return <Router>
     <Header/>
@@ -20,7 +21,7 @@ function App() {
       <Route path='/netflix' element={<Netflix/>}/>
       <Route path='/lib' element={<Lib/>}/>
       <Route path='/weather' element={<Weather/>}/>
-      <Route path='/otm' element={<Weather/>}/>
+      <Route path='/otm' element={<OTM/>}/>
     </Routes>
     <Footer/>
   </Router>
