@@ -6,9 +6,12 @@ import {
   GridItem,
   Heading,
   HStack,
+  Input,
   Stack,
   Text,
   VStack,
+  FormLabel,
+  Textarea,
 } from '@chakra-ui/react';
 import './home.css';
 import { Link } from 'react-router-dom';
@@ -18,10 +21,12 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Marquee from 'react-fast-marquee';
 import { GoPrimitiveDot } from 'react-icons/go';
-import { AiOutlineArrowRight,AiFillTwitterCircle } from 'react-icons/ai';
+import { AiOutlineArrowRight, AiFillTwitterCircle } from 'react-icons/ai';
 import Tech from '../animations/TechStack/Tech';
+import project from './data';
+// import Testimonial from '../Testomonial/Testimonial'
+// import Contact from '../Contact/Contact';
 const Home = () => {
-
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -51,19 +56,12 @@ const Home = () => {
             </Link>
           </Box>
         </Stack>
-        <Stack
-          direction={['column']}
-          height="100%"
-          justifyContent={['center', 'space-between']}
-          alignItems={['center', 'baseline']}
-          spacing={['16', '7rem']}
-          marginTop={['13rem', '0rem']}
-        >
+        <Stack direction={['column']} height="100%" spacing={['16', '6rem']}>
           <VStack
             width={'full'}
             alignItems={['center', 'center']}
             spacing={['7', '4']}
-            marginTop={['-10rem', '5rem']}
+            marginTop={['3rem', '5rem']}
           >
             <Heading
               textAlign={'center'}
@@ -86,9 +84,9 @@ const Home = () => {
               children="I'm a Full Stack Developer and Programmer who enjoys turning problems and opportunities into simple interface through design and code."
             />
 
-            <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'} minW={'200'}>
+            <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'}>
               <HStack className="brandsBanner" justifyContent={'space-evenly'}>
-                <a href="https://github.com/akashpatelknit" target=''>
+                <a href="https://github.com/akashpatelknit" target="">
                   <AiFillGithub />
                 </a>
                 <a href="https://www.instagram.com/akashknitian_/">
@@ -102,16 +100,15 @@ const Home = () => {
                 </a>
               </HStack>
             </Box>
+
             <HStack>
               <Link to="/courses">
                 <Button
                   size={'lg'}
-                  padding={'1rem'}
+                  // padding={'1rem'}
                   colorScheme={'linkedin'}
-                  // color={'white'}
                   borderRadius={'1rem'}
-                  // width={['', '150px']}
-                   minW={['40', '40']}
+                  minW={['0', '40']}
                 >
                   Hire Me
                 </Button>
@@ -119,129 +116,196 @@ const Home = () => {
               <Link to="/courses">
                 <Button
                   size={'lg'}
-                  padding={'1rem'}
                   colorScheme={'linkedin'}
-                  // color={'white'}
                   borderRadius={'1rem'}
-                   minW={['35', '40']}
+                  minW={['0', '40']}
                 >
-                  Download CV
+                  Resume
                 </Button>
               </Link>
             </HStack>
           </VStack>
-        </Stack>
 
-        {/* project box **************************** */}
-
-        <Stack margin={'4rem '}>
-          
-          <Heading
-            textAlign={'center'}
-            size={['lg', 'xl']}
-            children="Projects"
-          />
-        </Stack>
-        <Grid
-          templateColumns={['repeat(1, 1fr)', 'repeat(3, 1fr)']}
-          gap={6}
-          // marginLeft={['3rem', '3rem']}
-          width={['245px','1200px']}
-       
-        margin={'auto'}
-          
-        >
-          <GridItem>
-            <Link to="/otm">
-              <CourseCard src='https://onix-systems.com/_next/image?url=https%3A%2F%2Fcdn.onix-systems.com%2Fstatic%2Fimages%2FPages%2FFitnessApp%2Frunning_woman.gif&w=640&q=75' title='Onthemove' colour='black' link='/otm' />
-            </Link>
-          </GridItem>
-          <GridItem>
-            <Link to="/netflix">
-             <CourseCard src='https://i.pinimg.com/originals/25/ae/6c/25ae6c3bbc39e96c2948e863e6fe61c4.gif' title='Netflix Clone' color='red'
-              link='/netflix'    />
-             
-            </Link>
-          </GridItem>
-          <GridItem >
-            <Link to="/weather">
-               <CourseCard src='https://i.pinimg.com/originals/79/35/fd/7935fdf1fe2c5dd8205de03a214befb0.gif' title='Weather App'color=''
-               link='/weather'
-                />
-            </Link>
-          </GridItem>
-          <GridItem>
-            <Link to="/lib">
-              <Link to="/courses">
-              <CourseCard src='https://cdn.dribbble.com/users/686119/screenshots/2435023/untitled.gif' title='My Library' colour=''/>
-            </Link>
-            </Link>
-          </GridItem>
-          <GridItem
-          
-          >
-            <Link to="/courses">
-            <Button
-              size={'lg'}
-              padding={'1rem'}
-              colorScheme='linkedin'
-              borderRadius={'1rem'}
-              mt={['','4rem']}
-               minW={['30', '30']}
+          {/**************** * PROJECTS ********************************/}
+          <Stack textAlign={'center'}>
+            <Heading size={['lg', 'xl']} children="Projects" />
+            <Grid
+              templateColumns={['repeat(1, 1fr)', 'repeat(3, 1fr)']}
+              padding={'2'}
+              gap={['10', '']}
             >
-              More <AiOutlineArrowRight />
-            </Button>
-          </Link>
-          </GridItem>
+              {project.map((item, index) => {
+                return (
+                  <GridItem>
+                    <CourseCard
+                      src={item.src}
+                      title={item.title}
+                      colour={item.colour}
+                      link={item.link}
+                    />
+                  </GridItem>
+                );
+              })}
+              <GridItem>
+                <Link to="/courses">
+                  <Button
+                    size={'lg'}
+                    padding={'1rem'}
+                    colorScheme="linkedin"
+                    borderRadius={'1rem'}
+                    mt={['', '4rem']}
+                    minW={['30', '30']}
+                  >
+                    More <AiOutlineArrowRight />
+                  </Button>
+                </Link>
+              </GridItem>
+            </Grid>
+          </Stack>
 
-         
-        </Grid>
+          {/***********************************************************/}
 
-        {/* what i do */}
-        <Stack
-          direction={['column', 'row']}
-          marginTop={['1rem', '7rem']}
-          alignItems={'center'}
-          justifyContent={'center'}
-        >
-          <VStack
-            alignItems={'flex-start'}
-            width={['', '7xl']}
-            justifyContent={'center'}
-            spacing={'5'}
-            borderRadius={'2rem'}
-            marginLeft={['', '3rem']}
+          {/***************************THINGS I DO***************************/}
+          <Stack
+            direction={['column', 'row']}
+            w={'full'}
+            m={'auto'}
+            gap={'1rem'}
           >
-            <Heading textAlign={['center', '']} children="Things I Do" mt={['4rem','']} />
-            <Text
-              fontSize={'xl'}
-              color={'#8D8D8D'}
-              children="Design, strategy, management, creative direction, & development are my specialities, and I have had nearly a decade honing in my skills. In all my project, I find that efficient work - flows, excellent communication skills and a dose of self-discipline are key - a strong work ethic has driven my success in a myriad of specialties."
-            />
-          </VStack>
-          <VStack
-            alignItems={'center'}
-            width={['', '7xl']}
-            borderRadius={'2rem'}
-            
-          >
-            <Heading marginRight={'13rem'} mt={['4rem','']} children="Skills" />
-            <Stack
-              
+            <VStack
+              alignItems={'flex-start'}
+              width={'full'}
+              justifyContent={'center'}
               borderRadius={'2rem'}
-              borderTopLeftRadius={['','0']}
+              borderTopLeftRadius={['0', '0']}
               boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
-              data-aos="zoom-in"
-              
             >
-              <Tech />
-            </Stack>
-          </VStack>
+              <Heading
+                textAlign={['center', '']}
+                children="Things I Do"
+                padding={'2'}
+              />
+              <Text
+                fontSize={['lg', 'xl']}
+                color={'#8D8D8D'}
+                padding={['3', '2']}
+                children="Design, strategy, management, creative direction, & development are my specialities, and I have had nearly a decade honing in my skills. In all my project, I find that efficient work - flows, excellent communication skills and a dose of self-discipline are key - a strong work ethic has driven my success in a myriad of specialties."
+              />
+            </VStack>
+            <VStack
+              alignItems={'flex-start'}
+              // width={['', '7xl']}
+              width={'full'}
+              borderRadius={'2rem'}
+              borderTopLeftRadius={['0', '0']}
+              boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+            >
+              <Heading children="Skills" padding={'2'} />
+              <HStack
+                borderRadius={'2rem'}
+                borderTopLeftRadius={['', '0']}
+                // boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+                data-aos="zoom-in"
+              >
+                <Stack>
+                  <Tech />
+                </Stack>
+              </HStack>
+            </VStack>
+          </Stack>
 
+          {/* Contact************************************************** */}
+          <Stack
+            direction={['column', 'row']}
+            w={'full'}
+            m={'auto'}
+            gap={'1rem'}
+          >
+            <VStack
+              alignItems={'flex-start'}
+              width={'full'}
+              justifyContent={'center'}
+              borderRadius={'2rem'}
+              borderTopLeftRadius={['0', '0']}
+              boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+            >
+
+              {/* <Testimonial/> */}
+            </VStack>
+            <VStack
+              alignItems={'flex-start'}
+              width={'full'}
+              borderRadius={'2rem'}
+              borderTopLeftRadius={['0', '0']}
+              boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+            >
+              <Heading children="Contact" padding={'2'} />
+              <HStack
+                borderRadius={'2rem'}
+                borderTopLeftRadius={['', '0']}
+                // boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+              >
+                <Stack
+                  spacing={3}
+                  // border={'1px'}
+                  w={['300px', '650px']}
+                  padding={'6'}
+                >
+                  <Box >
+                    <FormLabel htmlFor="name" children="Name" />
+                    <Input
+                      required
+                      id="name"
+                      // value={name}
+                      // onChange={e => setName(e.target.value)}
+                      placeholder="Abc"
+                      type={'text'}
+                      focusBorderColor="yellow.500"
+                    />
+                  </Box>
+
+                  <Box my={'4'}>
+                    <FormLabel htmlFor="email" children="Email Address" />
+                    <Input
+                      required
+                      id="email"
+                      // value={email}
+                      // onChange={e => setEmail(e.target.value)}
+                      placeholder="abc@gmail.com"
+                      type={'email'}
+                      focusBorderColor="yellow.500"
+                    />
+                  </Box>
+
+                  <Box my={'4'}>
+                    <FormLabel htmlFor="message" children="Message" />
+                    <Textarea
+                      required
+                      id="message"
+                      // value={message}
+                      // onChange={e => setMessage(e.target.value)}
+                      placeholder="Your Message...."
+                      focusBorderColor="yellow.500"
+                    />
+                  </Box>
+                  <Button
+                     maxW={'100'}
+                    my="4"
+                    colorScheme={'linkedin'}
+                    type="submit"
+                  >
+                    Send Mail
+                  </Button>
+                </Stack>
+              </HStack>
+            </VStack>
+          </Stack>
+
+          {/**************services************************ */}
+
+          {/***********************************************************/}
         </Stack>
-       
       </div>
-   
     </section>
   );
 };

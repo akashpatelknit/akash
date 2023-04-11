@@ -19,6 +19,7 @@ import {
   vscode,
   postman,
 } from './photos/index';
+import { Grid, GridItem, HStack } from '@chakra-ui/react';
 const icon = [
   css,
   git,
@@ -47,10 +48,19 @@ const Tech = () => {
 
   return (
     <>
-      <section class="body">
-        <motion.div className="container-float">
+      <section >
+        <HStack
+        >
+          <Grid
+          templateColumns={['repeat(4, 1fr)', 'repeat(10, 1fr)']}
+          gap={'4'}
+          padding={'3'}
+          >
+           
+             {/* <motion.div className="container-float"> */}
           {icon.map((icon, index) => {
             return (
+             <GridItem>
               <motion.img
                 className="item"
                 drag
@@ -60,9 +70,15 @@ const Tech = () => {
                 alt=""
                 key={index}
               />
+              </GridItem>
             );
           })}
-        </motion.div>
+        {/* </motion.div> */}
+         
+          </Grid>
+          
+        </HStack>
+       
       </section>
     </>
   );

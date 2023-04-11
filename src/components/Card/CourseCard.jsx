@@ -4,7 +4,6 @@ import {
   Stack,
   Box,
   Image,
-  Text,
   HStack,
   Grid,
   GridItem,
@@ -25,7 +24,7 @@ import { Link } from 'react-router-dom';
 const CourseCard = ({ title, src, color, link }) => {
   let image = [];
   if (title === 'Netflix Clone') {
-    image = [react, postman, gitHub, javascript, vscode,scss];
+    image = [react, postman, gitHub, javascript, vscode, scss];
   } else if (title === 'Onthemove') {
     image = [html, gitHub, javascript, nodejs];
   } else if (title === 'Weather App') {
@@ -40,46 +39,48 @@ const CourseCard = ({ title, src, color, link }) => {
           className="course"
           alignItems={['center', 'center']}
           borderRadius={'1rem'}
+          w={'full'}
+          margin={'auto'}
+           boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
         >
           <Box
-            padding={''}
             borderRadius={'1.5rem'}
             justifyContent={'center'}
             alignItems={'center'}
-            width={['', '350px']}
+            width={['', '400px']}
             margin={'auto'}
           >
-            <Stack direction={['column', 'row']} width={'full'} spacing={''}>
+            <Stack direction={['column', 'row']} width={'full'} m={'auto'}>
               <Image
                 src={src}
                 objectFit={'cover'}
                 borderRadius={'1rem'}
                 boxSize={['248px', '200px']}
-                borderTopRightRadius={['', '0rem']}
+                margin={'auto'}
                 borderBottomLeftRadius={['1rem', '1rem']}
-                borderBottomRightRadius={['1rem', '0rem']}
               />
-              <VStack padding={''} justifyContent={'space-evenly'} mt={'3'}>
+              <VStack
+                padding={''}
+                justifyContent={'space-evenly'}
+              >
                 <Heading
                   children={title}
-                  display={['', 'inherit']}
                   textAlign={'center'}
                   fontSize={['', 'xl']}
-                  ml={'3'}
                   color={color}
                 />
                 <VStack>
-                  <Text children="Tech Stacks" display={['none']} />
                   <HStack wrap={'wrap'} fontSize={'1.5rem'}>
                     <Grid
-                      templateColumns={['repeat(6, 1fr)', 'repeat(3, 1fr)']}
-                      gap={'5px'}
-                      marginLeft={['1.5rem', '']}
-                      mb={['1', '']}
+                      templateColumns={['repeat(4, 1fr)', 'repeat(3, 1fr)']}
                     >
                       {image.map((item, index) => {
                         return (
-                          <GridItem borderRadius={'50%'} padding={'4px'}>
+                          <GridItem
+                            borderRadius={'50%'}
+                            padding={'4px'}
+                            width={'50px'}
+                          >
                             <img src={item} alt="" />
                           </GridItem>
                         );

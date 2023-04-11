@@ -2,14 +2,14 @@
 /* perspective: 500px; */
 }
 
-.container-float {
+/* .container-float {
   width: 300px;
   height: 300px;
   display: flex;
   place-content: center;
   place-items: center;
   overflow: hidden;
-  /* background: rgba(255, 255, 255, 0.2); */
+   background: rgba(255, 255, 255, 0.2); 
   border-radius: 30px;
   flex-wrap: wrap;
   gap: 1rem;
@@ -17,7 +17,7 @@
   align-items: center;
  
   
-}
+} */
 .item {
   width: 50px;
   height: 50px;

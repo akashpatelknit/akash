@@ -4,8 +4,8 @@ import { AiFillGithub, AiFillInstagram, AiFillLinkedin,AiFillTwitterCircle } fro
 
 const Footer = () => {
   return (
-    <Box padding={'1'}  minH={'10vh'}
-    width={['','full']}
+    <Box  minH={'10vh'}
+    width={'99vw'}
     margin={'auto'}
  
     mt={['2rem','']}
