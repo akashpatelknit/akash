@@ -67,7 +67,7 @@ const Home = () => {
               textAlign={'center'}
               children="Hi, I'm Akash Patel."
               size={['lg', '3xl']}
-              marginBottom={'-4'}
+              marginBottom={'-1.8rem'}
               data-aos="fade-left"
             />
             <Heading
