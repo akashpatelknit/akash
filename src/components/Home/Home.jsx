@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useRef,useState } from 'react';
+
 import {
   Box,
   Button,
@@ -14,7 +15,7 @@ import {
   Textarea,
 } from '@chakra-ui/react';
 import './home.css';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 import CourseCard from '../Card/CourseCard';
 import Aos from 'aos';
@@ -24,9 +25,36 @@ import { GoPrimitiveDot } from 'react-icons/go';
 import { AiOutlineArrowRight, AiFillTwitterCircle } from 'react-icons/ai';
 import Tech from '../animations/TechStack/Tech';
 import project from './data';
+import emailjs from '@emailjs/browser';
 // import Testimonial from '../Testomonial/Testimonial'
 // import Contact from '../Contact/Contact';
 const Home = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [display,setDisplay]=useState('');
+  const form =useRef();
+  const nevigate=useNavigate();
+  const sendEmail = e => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_ykgugju',
+        'template_g2d9rg5',
+        form.current,
+        'S293160B7dAsEJ9hc'
+      )
+      .then(
+        result => {
+          setDisplay("Your message has been sended successfully");
+          nevigate('/')
+        },
+        error => {
+          setDisplay(error);
+        }
+      );
+  };
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -229,7 +257,6 @@ const Home = () => {
               borderTopLeftRadius={['0', '0']}
               boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
             >
-
               {/* <Testimonial/> */}
             </VStack>
             <VStack
@@ -251,51 +278,61 @@ const Home = () => {
                   w={['300px', '650px']}
                   padding={'6'}
                 >
-                  <Box >
-                    <FormLabel htmlFor="name" children="Name" />
-                    <Input
-                      required
-                      id="name"
-                      // value={name}
-                      // onChange={e => setName(e.target.value)}
-                      placeholder="Abc"
-                      type={'text'}
-                      focusBorderColor="yellow.500"
-                    />
-                  </Box>
+                  <form ref={form}>
+                    <Box>
+                      <FormLabel htmlFor="name" children="Name" />
+                      <Input
+                        required
+                        id="name"
+                        value={name}
+                        name='name'
+                        onChange={e => setName(e.target.value)}
+                        placeholder="Abc"
+                        type={'text'}
+                        focusBorderColor="yellow.500"
+                      />
+                    </Box>
 
-                  <Box my={'4'}>
-                    <FormLabel htmlFor="email" children="Email Address" />
-                    <Input
-                      required
-                      id="email"
-                      // value={email}
-                      // onChange={e => setEmail(e.target.value)}
-                      placeholder="abc@gmail.com"
-                      type={'email'}
-                      focusBorderColor="yellow.500"
-                    />
-                  </Box>
+                    <Box my={'4'}>
+                      <FormLabel htmlFor="email" children="Email Address" />
+                      <Input
+                        required
+                        id="email"
+                        value={email}
+                        name='email'
+                        onChange={e => setEmail(e.target.value)}
+                        placeholder="abc@gmail.com"
+                        type={'email'}
+                        focusBorderColor="yellow.500"
+                      />
+                    </Box>
 
-                  <Box my={'4'}>
-                    <FormLabel htmlFor="message" children="Message" />
-                    <Textarea
-                      required
-                      id="message"
-                      // value={message}
-                      // onChange={e => setMessage(e.target.value)}
-                      placeholder="Your Message...."
-                      focusBorderColor="yellow.500"
-                    />
-                  </Box>
-                  <Button
-                     maxW={'100'}
-                    my="4"
-                    colorScheme={'linkedin'}
-                    type="submit"
-                  >
-                    Send Mail
-                  </Button>
+                    <Box my={'4'}>
+                      <FormLabel htmlFor="message" children="Message" />
+                      <Textarea
+                        required
+                        id="message"
+                        name='message'
+                        value={message}
+                        onChange={e => setMessage(e.target.value)}
+                        placeholder="Your Message...."
+                        focusBorderColor="yellow.500"
+                      />
+                    </Box>
+                    
+                    <Button
+                      maxW={'100'}
+                      my="4"
+                      colorScheme={'linkedin'}
+                      type="submit"
+                      onClick={sendEmail}
+                    >
+                      Send Mail
+                    </Button>
+                    <text>
+                      {display}
+                    </text>
+                  </form>
                 </Stack>
               </HStack>
             </VStack>
