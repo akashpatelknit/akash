@@ -10,9 +10,13 @@ import Netflix from './components/All Projects/Netflix';
 import Lib from './components/All Projects/Lib';
 import Weather from './components/All Projects/Weather';
 import OTM from './components/All Projects/OTM'
+import ScrollToTop from './components/ScrollToTop';
 function App() {
   return <Router>
     <Header/>
+    <ScrollToTop/>
+
+   
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/courses' element={<Courses/>} />

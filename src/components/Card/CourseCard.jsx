@@ -41,7 +41,7 @@ const CourseCard = ({ title, src, color, link }) => {
           borderRadius={'1rem'}
           w={'full'}
           margin={'auto'}
-           boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+          //  boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}
         >
           <Box
             borderRadius={'1.5rem'}
@@ -49,6 +49,7 @@ const CourseCard = ({ title, src, color, link }) => {
             alignItems={'center'}
             width={['', '400px']}
             margin={'auto'}
+            boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}
           >
             <Stack direction={['column', 'row']} width={'full'} m={'auto'}>
               <Image
@@ -56,12 +57,17 @@ const CourseCard = ({ title, src, color, link }) => {
                 objectFit={'cover'}
                 borderRadius={'1rem'}
                 boxSize={['248px', '200px']}
-                margin={'auto'}
+                // margin={'auto'}
                 borderBottomLeftRadius={['1rem', '1rem']}
+                borderBottomRightRadius={['1rem', '0rem']}
+                borderTopRightRadius={['1rem', '0rem']}
               />
               <VStack
                 padding={''}
                 justifyContent={'space-evenly'}
+                // boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}
+                w={'full'}
+                m={'auto'}
               >
                 <Heading
                   children={title}

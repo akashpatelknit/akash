@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useEffect,useRef,useState } from 'react';
 
 import {
@@ -26,7 +27,7 @@ import { AiOutlineArrowRight, AiFillTwitterCircle } from 'react-icons/ai';
 import Tech from '../animations/TechStack/Tech';
 import project from './data';
 import emailjs from '@emailjs/browser';
-// import Testimonial from '../Testomonial/Testimonial'
+import Testimonial from '../Testomonial/Testimonial'
 // import Contact from '../Contact/Contact';
 const Home = () => {
   const [name, setName] = useState('');
@@ -198,15 +199,16 @@ const Home = () => {
             direction={['column', 'row']}
             w={'full'}
             m={'auto'}
+             zIndex={'-1'}
             gap={'1rem'}
           >
             <VStack
               alignItems={'flex-start'}
               width={'full'}
               justifyContent={'center'}
-              borderRadius={'2rem'}
+              borderRadius={'1rem'}
               borderTopLeftRadius={['0', '0']}
-              boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+             boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}
             >
               <Heading
                 textAlign={['center', '']}
@@ -224,13 +226,13 @@ const Home = () => {
               alignItems={'flex-start'}
               // width={['', '7xl']}
               width={'full'}
-              borderRadius={'2rem'}
+              borderRadius={'1rem'}
               borderTopLeftRadius={['0', '0']}
-              boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+             boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}
             >
               <Heading children="Skills" padding={'2'} />
               <HStack
-                borderRadius={'2rem'}
+                borderRadius={'1rem'}
                 borderTopLeftRadius={['', '0']}
                 // boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
                 data-aos="zoom-in"
@@ -241,34 +243,45 @@ const Home = () => {
               </HStack>
             </VStack>
           </Stack>
+          <Stack
+             boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}
+            
+             borderRadius={'1rem'}
+          
+          >
 
+          <Testimonial/>
+          </Stack>
           {/* Contact************************************************** */}
           <Stack
             direction={['column', 'row']}
             w={'full'}
             m={'auto'}
             gap={'1rem'}
+             zIndex={'-1'}
           >
             <VStack
-              alignItems={'flex-start'}
+              alignItems={'center'}
               width={'full'}
               justifyContent={'center'}
-              borderRadius={'2rem'}
+              borderRadius={'1rem'}
               borderTopLeftRadius={['0', '0']}
-              boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+              // boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
             >
-              {/* <Testimonial/> */}
+            
             </VStack>
             <VStack
               alignItems={'flex-start'}
               width={'full'}
-              borderRadius={'2rem'}
+              borderRadius={'1rem'}
               borderTopLeftRadius={['0', '0']}
-              boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+              // boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
+                           boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}
+
             >
               <Heading children="Contact" padding={'2'} />
               <HStack
-                borderRadius={'2rem'}
+                borderRadius={'1rem'}
                 borderTopLeftRadius={['', '0']}
                 // boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
               >
@@ -343,6 +356,7 @@ const Home = () => {
           {/***********************************************************/}
         </Stack>
       </div>
+      
     </section>
   );
 };
