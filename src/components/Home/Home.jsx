@@ -258,7 +258,7 @@ const Home = () => {
             w={'full'}
             m={'auto'}
             gap={'1rem'}
-             zIndex={'-1'}
+            //  zIndex={'-1'}
           >
             <VStack
               alignItems={'center'}
