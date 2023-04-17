@@ -159,9 +159,16 @@ const Home = () => {
           <Stack textAlign={'center'}>
             <Heading size={['lg', 'xl']} children="Projects" />
             <Grid
-              templateColumns={['repeat(1, 1fr)', 'repeat(3, 1fr)']}
+              // templateColumns={['repeat(1, 1fr)', 'repeat(3, 1fr)']}
+              display={'flex'}
               padding={'2'}
-              gap={['10', '']}
+              justifyContent={['center','flex-start']}
+              alignItems={'center'}
+               justifySelf={'center'}
+              // width={'90vw'}
+              // margin={'auto'}
+              flexWrap={'wrap'}
+              gap={['10', '3rem']}
             >
               {project.map((item, index) => {
                 return (
@@ -173,23 +180,27 @@ const Home = () => {
                       link={item.link}
                     />
                   </GridItem>
+                  
                 );
               })}
-              <GridItem>
+               <GridItem>
                 <Link to="/courses">
                   <Button
                     size={'lg'}
                     padding={'1rem'}
                     colorScheme="linkedin"
                     borderRadius={'1rem'}
-                    mt={['', '4rem']}
+                    justifySelf={'center'}
+                    // mt={['', ']}
                     minW={['30', '30']}
                   >
                     More <AiOutlineArrowRight />
                   </Button>
                 </Link>
               </GridItem>
+             
             </Grid>
+            
           </Stack>
 
           {/***********************************************************/}
