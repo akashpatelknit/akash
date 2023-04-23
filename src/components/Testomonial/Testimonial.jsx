@@ -19,19 +19,17 @@ export default class Testimonial extends Component {
           
         </VStack>
         <Slider {...settings}>
+         
           <div>
             <Stack
               direction={['column-reverse', 'row']}
               alignItems={'flex-start'}
-               zIndex={'-1'}
               margin={'auto'}
               justifyContent={'center'}
-              borderRadius={'1rem'}
-              borderTopLeftRadius={['0', '1rem']}
+              borderRadius={'2rem'}
+              borderTopLeftRadius={['0', '0']}
               //  border={'1px'}
-              bg={'white'}
               padding={['', '3rem']}
-              
             >
               <VStack
                 align={'flex-start'}
@@ -43,13 +41,12 @@ export default class Testimonial extends Component {
                 bg={'white'}
                 width={['95%', 'full']}
                 m={'auto'}
-                
               >
                 <Image
                   width={['9%', '5%']}
                   src="https://img.icons8.com/color/48/null/quote-left.png"
                   position={'relative'}
-                  top={['20px','0px']}
+                  top={'20px'}
                 />
 
                 <Text
