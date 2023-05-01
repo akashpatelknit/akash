@@ -101,7 +101,7 @@ const Home = () => {
             />
             <Heading
               textAlign={'center'}
-              children=" I design, code and develope websites."
+              children=" I design, code, and develop websites."
               size={['lg', '3xl']}
               data-aos="fade-right"
             />
@@ -110,7 +110,7 @@ const Home = () => {
               width={['', '700px']}
               textAlign={['center', 'center']}
               color={'#8D8D8D'}
-              children="I'm a Full Stack Developer and Programmer who enjoys turning problems and opportunities into simple interface through design and code."
+              children="I'm a full-stack developer and programmer who enjoys turning problems and opportunities into simple interfaces through design and code."
             />
 
             <Box padding={'2'} bg="#F3F4F6" borderRadius={'2rem'}>
@@ -159,14 +159,11 @@ const Home = () => {
           <Stack textAlign={'center'}>
             <Heading size={['lg', 'xl']} children="Projects" />
             <Grid
-              // templateColumns={['repeat(1, 1fr)', 'repeat(3, 1fr)']}
               display={'flex'}
               padding={'2'}
-              justifyContent={['center','flex-start']}
+              justifyContent={['center','center','center','center','flex-start']}
               alignItems={'center'}
-               justifySelf={'center'}
-              // width={'90vw'}
-              // margin={'auto'}
+              justifySelf={'center'}
               flexWrap={'wrap'}
               gap={['10', '3rem']}
             >
@@ -183,7 +180,7 @@ const Home = () => {
                   
                 );
               })}
-               <GridItem>
+               {/* <GridItem>
                 <Link to="/courses">
                   <Button
                     size={'lg'}
@@ -191,13 +188,12 @@ const Home = () => {
                     colorScheme="linkedin"
                     borderRadius={'1rem'}
                     justifySelf={'center'}
-                    // mt={['', ']}
                     minW={['30', '30']}
                   >
                     More <AiOutlineArrowRight />
                   </Button>
                 </Link>
-              </GridItem>
+              </GridItem> */}
              
             </Grid>
             
@@ -235,7 +231,6 @@ const Home = () => {
             </VStack>
             <VStack
               alignItems={'flex-start'}
-              // width={['', '7xl']}
               width={'full'}
               borderRadius={'1rem'}
               borderTopLeftRadius={['0', '0']}
