@@ -13,13 +13,9 @@ export default class Testimonial extends Component {
       slidesToScroll: 1,
     };
     return (
-      <div>
-        <VStack textAlign={'center'}>
-          <Heading children="Testimonials" />
-          
-        </VStack>
+      <>
+        <VStack></VStack>
         <Slider {...settings}>
-         
           <div>
             <Stack
               direction={['column-reverse', 'row']}
@@ -28,17 +24,14 @@ export default class Testimonial extends Component {
               justifyContent={'center'}
               borderRadius={'2rem'}
               borderTopLeftRadius={['0', '0']}
-              //  border={'1px'}
               padding={['', '3rem']}
             >
+              <Stack boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}></Stack>
               <VStack
                 align={'flex-start'}
-                //  border={'1px'}
-                //  width={'fit-content'}
                 position={['relative', 'initial']}
                 top={['-40px', '']}
                 borderRadius={'1rem'}
-                bg={'white'}
                 width={['95%', 'full']}
                 m={'auto'}
               >
@@ -46,7 +39,7 @@ export default class Testimonial extends Component {
                   width={['9%', '5%']}
                   src="https://img.icons8.com/color/48/null/quote-left.png"
                   position={'relative'}
-                  top={'20px'}
+                  top={'30px'}
                 />
 
                 <Text
@@ -92,17 +85,13 @@ export default class Testimonial extends Component {
               justifyContent={'center'}
               borderRadius={'2rem'}
               borderTopLeftRadius={['0', '0']}
-              //  border={'1px'}
               padding={['', '3rem']}
             >
               <VStack
                 align={'flex-start'}
-                //  border={'1px'}
-                //  width={'fit-content'}
                 position={['relative', 'initial']}
                 top={['-40px', '']}
                 borderRadius={'1rem'}
-                bg={'white'}
                 width={['95%', 'full']}
                 m={'auto'}
               >
@@ -149,7 +138,7 @@ export default class Testimonial extends Component {
             </Stack>
           </div>
         </Slider>
-      </div>
+      </>
     );
   }
 }
