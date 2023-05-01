@@ -19,7 +19,7 @@ import {
   vscode,
   postman,
 } from './photos/index';
-import { Grid, GridItem, HStack } from '@chakra-ui/react';
+import { Grid, GridItem, HStack, VStack } from '@chakra-ui/react';
 const icon = [
   css,
   git,
@@ -50,15 +50,17 @@ const Tech = () => {
     <>
       <section >
         <HStack
+        flexWrap={'wrap'}
+        justifyContent={'flex-start'}
         >
           <Grid
-          templateColumns={['repeat(4, 1fr)', 'repeat(10, 1fr)']}
+          templateColumns={'max-content'}
+          flexDirection={'row'}
           gap={'4'}
           padding={'3'}
           >
            
-             {/* <motion.div className="container-float"> */}
-          {icon.map((icon, index) => {
+          {/* {icon.map((icon, index) => {
             return (
              <GridItem>
               <motion.img
@@ -72,10 +74,25 @@ const Tech = () => {
               />
               </GridItem>
             );
-          })}
-        {/* </motion.div> */}
+          })} */}
+       
          
           </Grid>
+          {icon.map((icon, index) => {
+            return (
+          
+              <motion.img
+                className="item"
+                drag
+                dragConstraints={dragConstraints}
+                whileTap={{ cursor: 'grabbing' }}
+                src={icon}
+                alt=""
+                key={index}
+              />
+             
+            );
+          })}
           
         </HStack>
        

@@ -53,7 +53,7 @@ export default class Testimonial extends Component {
                   fontSize={['lg', 'xl']}
                   color={'#8D8D8D'}
                   padding={['3', '2']}
-                  children="I developed an interest in HR Management and came across Internshala Trainings, the courses were affordable with great content. The best part was that they provided me with a lot of practical projects to work on, which landed me my first internship! I'll be forever grateful to Internshala!"
+                  children="I developed an interest in HR Management and came across Internshala Trainings, the courses were affordable with great content. The best part was that they provided me "
                 />
                 <Heading
                   textAlign={['center', '']}
