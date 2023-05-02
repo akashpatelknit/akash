@@ -6,7 +6,7 @@ import Courses from './components/Courses/Courses';
 import Footer from './components/Layout/Footer/Footer';
 import About from './components/About/About';
 import ScrollToTop from './components/ScrollToTop';
-import Connect from './components/Connect';
+import Contact from './components/Contact/Contact';
 function App() {
   return (
     <Router>
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/contact" element={<Connect flag={false} />} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />

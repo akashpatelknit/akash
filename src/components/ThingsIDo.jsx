@@ -34,7 +34,7 @@ const ThingsIDo = () => {
             fontSize={['lg', 'xl']}
             color={'#8D8D8D'}
             padding={['3', '2']}
-            children="Design, strategy, management, creative direction, & development are my specialities, and I have had nearly a decade honing in my skills. In all my project, I find that efficient work - flows, excellent communication skills and a dose of self-discipline are key - a strong work ethic has driven my success in a myriad of specialties."
+            children="I'm a versatile full-stack developer and programmer who loves creating beautiful and functional interfaces. I enjoy solving problems and turning them into user-friendly solutions. With my skills in design and coding, I excel at simplifying complex issues. I prioritize the needs of the users, ensuring intuitive and tailored interfaces. Overall, I bring simplicity, efficiency, and a keen eye for design to every project I work on."
           />
         </VStack>
         <VStack

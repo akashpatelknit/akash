@@ -6,17 +6,21 @@ import { Link } from 'react-router-dom';
 const Freelance = () => {
   return (
     <>
+
+    
      <Stack
           bg="#F3F4F6"
-          padding={'.5rem'}
           width={'450px'}
           margin={'auto'}
           borderRadius={'3rem'}
           display={['none', 'inherit']}
-          marginTop={'1rem'}
+          py={'.5rem'}
+          mt={'-1rem'}
         >
-          <Box borderRadius={'3rem'}>
-            <Link>
+          <Box borderRadius={'3rem'}
+          
+          >
+            <Link to={'/contact'}>
               <Marquee speed="100" gradientColor="none" width="450px">
                 <GoPrimitiveDot fontSize={'2rem'} color="red" width={'10px'} />
                 <Text
@@ -29,6 +33,7 @@ const Freelance = () => {
             </Link>
           </Box>
         </Stack>
+      
     </>
   )
 }

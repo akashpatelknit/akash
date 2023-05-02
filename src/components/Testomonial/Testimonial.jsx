@@ -14,7 +14,6 @@ export default class Testimonial extends Component {
     };
     return (
       <>
-        <VStack></VStack>
         <Slider {...settings}>
           <div>
             <Stack
@@ -23,12 +22,12 @@ export default class Testimonial extends Component {
               margin={'auto'}
               justifyContent={'center'}
               borderRadius={'2rem'}
-              borderTopLeftRadius={['0', '0']}
               padding={['', '3rem']}
+              border={'2px solid #8D8D8D'}
             >
               <Stack boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}></Stack>
               <VStack
-                align={'flex-start'}
+                align={['flex-start']}
                 position={['relative', 'initial']}
                 top={['-40px', '']}
                 borderRadius={'1rem'}
@@ -45,19 +44,20 @@ export default class Testimonial extends Component {
                 <Text
                   fontSize={['lg', 'xl']}
                   color={'#8D8D8D'}
-                  padding={['3', '2']}
-                  children="I developed an interest in HR Management and came across Internshala Trainings, the courses were affordable with great content. The best part was that they provided me "
+                  padding={['3', '']}
+                  children="
+Akash was hired as a backend developer at onethemove.life. We were extremely satisfied with his work. His contributions greatly enhanced our project. Akash's skills and dedication made a significant impact on our team's success."
                 />
                 <Heading
                   textAlign={['center', '']}
-                  children="Bhakti Karekar"
-                  padding={'2'}
+                  children="Pranav Yadav"
+                  paddingLeft={'2'}
                 />
                 <Text
                   fontSize={['lg', 'xl']}
                   color={'#8D8D8D'}
-                  padding={['3', '2']}
-                  children="Weligkar Institute of Management"
+                  paddingLeft={['3', '']}
+                  children="IIT Kanpur"
                 />
               </VStack>
               <VStack
@@ -66,70 +66,11 @@ export default class Testimonial extends Component {
                 justifyContent={'center'}
               >
                 <Image
-                  width={'95%'}
-                  src="https://trainings.internshala.com/cached_uploads/homepage/media/reviews_section/bhakti_karekar.png"
+                  width={'50%'}
+                  src="https://icon-library.com/images/male-user-icon/male-user-icon-11.jpg"
                   justifyContent={'center'}
                   alignItems={'center'}
-                  borderRadius={'1rem'}
-                  borderBottomLeftRadius={['0', '1rem']}
-                  borderBottomRightRadius={['0', '1rem']}
-                />
-              </VStack>
-            </Stack>
-          </div>
-          <div>
-            <Stack
-              direction={['column-reverse', 'row']}
-              alignItems={'flex-start'}
-              margin={'auto'}
-              justifyContent={'center'}
-              borderRadius={'2rem'}
-              borderTopLeftRadius={['0', '0']}
-              padding={['', '3rem']}
-            >
-              <VStack
-                align={'flex-start'}
-                position={['relative', 'initial']}
-                top={['-40px', '']}
-                borderRadius={'1rem'}
-                width={['95%', 'full']}
-                m={'auto'}
-              >
-                <Image
-                  width={['9%', '5%']}
-                  src="https://img.icons8.com/color/48/null/quote-left.png"
-                  position={'relative'}
-                  top={'20px'}
-                />
-
-                <Text
-                  fontSize={['lg', 'xl']}
-                  color={'#8D8D8D'}
-                  padding={['3', '2']}
-                  children="I developed an interest in HR Management and came across Internshala Trainings, the courses were affordable with great content. The best part was that they provided me with a lot of practical projects to work on, which landed me my first internship! I'll be forever grateful to Internshala!"
-                />
-                <Heading
-                  textAlign={['center', '']}
-                  children="Bhakti Karekar"
-                  padding={'2'}
-                />
-                <Text
-                  fontSize={['lg', 'xl']}
-                  color={'#8D8D8D'}
-                  padding={['3', '2']}
-                  children="Weligkar Institute of Management"
-                />
-              </VStack>
-              <VStack
-                // border={'1px'}
-                alignItems={'center'}
-                justifyContent={'center'}
-              >
-                <Image
-                  width={'95%'}
-                  src="https://trainings.internshala.com/cached_uploads/homepage/media/reviews_section/bhakti_karekar.png"
-                  justifyContent={'center'}
-                  alignItems={'center'}
+                  margin={'auto'}
                   borderRadius={'1rem'}
                   borderBottomLeftRadius={['0', '1rem']}
                   borderBottomRightRadius={['0', '1rem']}

@@ -52,11 +52,10 @@ const CourseCard = ({ title}) => {
     />
   );
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [scrollBehavior, setScrollBehavior] = useState('inside')
   const [overlay, setOverlay] = React.useState(<OverlayTwo />);
   return (
     <Stack
-    // mt={'4rem'}
+    
     >
       <VStack
         className="course"
@@ -70,6 +69,7 @@ const CourseCard = ({ title}) => {
           onOpen();
           setOverlay(<OverlayTwo />);
         }}
+        
       >
         <Box
           borderRadius={'1.5rem'}
@@ -86,8 +86,8 @@ const CourseCard = ({ title}) => {
               borderRadius={'1rem'}
               boxSize={['248px', '200px']}
               // margin={'auto'}
-              borderBottomLeftRadius={['1rem', '1rem']}
-              borderBottomRightRadius={['1rem', '0rem']}
+              borderBottomLeftRadius={['0rem', '1rem']}
+              borderBottomRightRadius={['0rem', '0rem']}
               borderTopRightRadius={['1rem', '0rem']}
             />
             <VStack
@@ -125,16 +125,23 @@ const CourseCard = ({ title}) => {
         </Box>
       </VStack>
 
-    
-      <Modal isCentered isOpen={isOpen} onClose={onClose} size={['sm', '3xl']}
-      scrollBehavior={scrollBehavior}
+      
+      <Modal  isOpen={isOpen} onClose={onClose} size={['sm', '3xl'] }
+      
+      
       
       >
         {overlay}
         <ModalContent >
           <ModalCloseButton />
-          <ModalBody mt={['1rem','1rem']}>
+          <ModalBody mt={['1rem','1rem']}  >
+            <Stack 
+            padding={'1rem'}
+            
+            >
+
             <ProjectCarosal poster={data.image} />
+            </Stack>
             
             <Stack
               direction={['column']}
@@ -213,6 +220,7 @@ const CourseCard = ({ title}) => {
                 />
               </Stack>
             </Stack>
+          
           </ModalBody>
           <ModalFooter>
             <Button onClick={onClose}>Close</Button>

@@ -10,6 +10,7 @@ import {
   FormLabel,
   Button,
   Textarea,
+  Text,
   Heading,
 } from '@chakra-ui/react';
 const Connect = ({ flag }) => {
@@ -48,22 +49,41 @@ const Connect = ({ flag }) => {
         gap={'1rem'}
         //  zIndex={'-1'}
       >
-        {flag && (
-          <VStack
-            alignItems={'start'}
-            width={'full'}
-            borderRadius={'1rem'}
-            borderTopLeftRadius={['0', '0']}
-            boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}
-            textAlign={'start'}
-          >
-            <Heading
-              children="Work Experience"
-              textAlign={'start'}
-              padding={'2'}
-            />
-          </VStack>
-        )}
+        <VStack
+          alignItems={'start'}
+          width={'full'}
+          borderRadius={'1rem'}
+          borderTopLeftRadius={['0', '0']}
+          boxShadow={'-2px 0 10px rgba(196, 175, 245, 0.5)'}
+          textAlign={'start'}
+        >
+          <Box p={4}>
+            <Heading as="h1" size="xl" mb={6}>
+              Work Experience
+            </Heading>
+            <hr></hr>
+
+            <VStack align="start" spacing={6} mt={'1rem'}>
+              <Box>
+                <Heading as="h2" size="lg" mb={2}>
+                  Backend Developer
+                </Heading>
+                <Text color="gray.500" mb={2}>
+                  Onthemove | January 2023 - Present
+                </Text>
+                <Text>
+                  I am currently employed at onthemove as a backend developer,
+                  utilizing JavaScript, NodeJS, and ExpressJS. In my role, I am
+                  responsible for implementing new modules into the website and
+                  resolving any bugs that arise. I actively contribute to
+                  enhancing the functionality and stability of the platform. It
+                  is a rewarding experience to be part of the team and make
+                  valuable contributions to the company's success.
+                </Text>
+              </Box>
+            </VStack>
+          </Box>
+        </VStack>
 
         <VStack
           alignItems={'flex-start'}
