@@ -30,11 +30,12 @@ const Header = () => {
         width={'12'}
         height={'12'}
         rounded={'full'}
-        position={'fixed'}
+        // position={'fixed'}
         top={'6'}
         left={'6'}
         colorScheme='linkedin'
         onClick={onOpen}
+       
       >
         <RiMenu5Fill />
       </Button>
@@ -44,12 +45,12 @@ const Header = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerBody>
-            <VStack spacing={'4'} alignItems={['center','center']}
+            <VStack spacing={'10'} alignItems={['center','center']}
               justifyContent={'center'}   
-                 
+              mt={'10rem'}   
              
             >
-              <LinkButton onclose={onClose} url="/" title="Home" />
+              <LinkButton onclose={onClose}  url="/" title="Home" />
               <LinkButton onclose={onClose} url="/courses" title="All Projects" />
               <LinkButton onclose={onClose} url="/contact" title="Contact " />
               <LinkButton onclose={onClose} url="/about" title="About Me" />

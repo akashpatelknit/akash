@@ -27,10 +27,7 @@ const Projects = () => {
             return (
               <GridItem>
                 <CourseCard
-                  src={item.src}
                   title={item.title}
-                  colour={item.colour}
-                  link={item.link}
                 />
               </GridItem>
             );

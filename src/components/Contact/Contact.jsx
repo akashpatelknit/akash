@@ -1,108 +1,133 @@
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { useNavigate } from 'react-router-dom';
 import {
-  Box,
-  Button,
-  Container,
-  FormLabel,
-  Heading,
-  Input,
-  Textarea,
+  HStack,
   VStack,
-  Avatar,
+  Stack,
+  Input,
+  Box,
+  FormLabel,
+  Button,
+  Textarea,
+  Heading,
 } from '@chakra-ui/react';
-import React from 'react';
-import { useState } from 'react';
-const Contact = () => {
+const Connect = ({ flag }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
-  // const dispatch = useDispatch();
-
-  // const {
-  //   loading,
-  //   error,
-  //   message: stateMessage,
-  // } = useSelector(state => state.other);
-
-  // const submitHandler = e => {
-  //   e.preventDefault();
-  //   dispatch(contactUs(name, email, message));
-  // };
-
-  // useEffect(() => {
-  //   if (error) {
-  //     toast.error(error);
-  //     dispatch({ type: 'clearError' });
-  //   }
-
-  //   if (stateMessage) {
-  //     toast.success(stateMessage);
-  //     dispatch({ type: 'clearMessage' });
-  //   }
-  // }, [dispatch, error, stateMessage]);
-
+  const [display, setDisplay] = useState('');
+  const [loading ,setLoading]=useState(false)
+  const form = useRef();
+  const nevigate = useNavigate();
+  const sendEmail = e => {
+    e.preventDefault();
+    setLoading(true)
+    emailjs
+      .sendForm(
+        'service_ykgugju',
+        'template_g2d9rg5',
+        form.current,
+        'S293160B7dAsEJ9hc'
+      )
+      .then(
+        result => {
+          setDisplay('Your message has been sended successfully');
+          nevigate('/');
+        },
+        error => {
+          setDisplay(error);
+        }
+      );
+  };
   return (
-    <Container h="92vh">
-      
-      <VStack h="full" justifyContent={'center'} spacing="5">
-        <Avatar
-          src="https://avatars.githubusercontent.com/u/86844027?s=400&u=8ce2530eb94b6f75ba6725e80f94194e3960dcec&v=4"
-          boxSize={['40', '48']}
-        />
-
-        <Heading children="Contact" />
-
-        <form onSubmit={''} style={{ width: '100%' }}>
-          <Box my={'4'}>
-            <FormLabel htmlFor="name" children="Name" />
-            <Input
-              required
-              id="name"
-              value={name}
-              onChange={e => setName(e.target.value)}
-              placeholder="Abc"
-              type={'text'}
-              focusBorderColor="yellow.500"
-            />
-          </Box>
-
-          <Box my={'4'}>
-            <FormLabel htmlFor="email" children="Email Address" />
-            <Input
-              required
-              id="email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              placeholder="abc@gmail.com"
-              type={'email'}
-              focusBorderColor="yellow.500"
-            />
-          </Box>
-
-          <Box my={'4'}>
-            <FormLabel htmlFor="message" children="Message" />
-            <Textarea
-              required
-              id="message"
-              value={message}
-              onChange={e => setMessage(e.target.value)}
-              placeholder="Your Message...."
-              focusBorderColor="yellow.500"
-            />
-          </Box>
-
-          <Button
-            // isLoading={loading}
-            my="4"
-            colorScheme={'linkedin'}
-            type="submit"
+    <>
+      <Stack
+        direction={['column', 'row']}
+        w={'full'}
+        m={'auto'}
+       justifyContent={'center'}
+       alignItems={'center'}
+        height={'80vh'}
+      >
+        
+        <VStack
+          alignItems={'center'}
+          width={'full'}
+          borderRadius={'1rem'}
+          borderTopLeftRadius={['0', '0']}
+        >
+          <Heading children="Contact" padding={'2'} />
+          <HStack
+            borderRadius={'1rem'}
+            borderTopLeftRadius={['', '0']}
+            // boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
           >
-            Send Mail
-          </Button>
-        </form>
-      </VStack>
-    </Container>
+            <Stack
+              spacing={3}
+              // border={'1px'}
+              w={['300px', '650px']}
+              padding={'6'}
+            >
+              <form ref={form}>
+                <Box>
+                  <FormLabel htmlFor="name" children="Name" />
+                  <Input
+                    required
+                    id="name"
+                    value={name}
+                    name="name"
+                    onChange={e => setName(e.target.value)}
+                    placeholder="Abc"
+                    type={'text'}
+                    focusBorderColor="yellow.500"
+                  />
+                </Box>
+
+                <Box my={'4'}>
+                  <FormLabel htmlFor="email" children="Email Address" />
+                  <Input
+                    required
+                    id="email"
+                    value={email}
+                    name="email"
+                    onChange={e => setEmail(e.target.value)}
+                    placeholder="abc@gmail.com"
+                    type={'email'}
+                    focusBorderColor="yellow.500"
+                  />
+                </Box>
+
+                <Box my={'4'}>
+                  <FormLabel htmlFor="message" children="Message" />
+                  <Textarea
+                    required
+                    id="message"
+                    name="message"
+                    value={message}
+                    onChange={e => setMessage(e.target.value)}
+                    placeholder="Your Message...."
+                    focusBorderColor="yellow.500"
+                  />
+                </Box>
+
+                <Button
+                  maxW={'100'}
+                  my="4"
+                  colorScheme={'linkedin'}
+                  type="submit"
+                  onClick={sendEmail}
+                >
+                  {loading?"Sending...":"Send Mail"}
+                </Button>
+                <text>{display}</text>
+              </form>
+            </Stack>
+          </HStack>
+        </VStack>
+      </Stack>
+    </>
   );
 };
 
-export default Contact;
+export default Connect;

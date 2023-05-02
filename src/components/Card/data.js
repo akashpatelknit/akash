@@ -35,8 +35,8 @@ const project = [
     link: '/weather',
     live:"https://weather-two-rho.vercel.app/",
     github:"https://github.com/akashpatelknit/weather",
-    image: [],
-    decs: 'On The Move is an online remote coaching platform where we bring individuals together to work on their lifestyle through community programs. We host programs on',
+    image: ['https://res.cloudinary.com/dcgqtiqoh/image/upload/v1683052182/udhkuallcs1scnugv6ie.png'],
+    decs: "This weather web app is a dynamic and interactive application created using React.js and integrated with a weather API. It enables users to access up-to-date weather information for any desired location.Upon loading the app, users are presented with a clean and user-friendly interface. They are prompted to input the name of a city or location in a search field. As the user types, the app dynamically updates the suggestions based on the input.",
   },
   {
     src: 'https://cdn.dribbble.com/users/686119/screenshots/2435023/untitled.gif',
@@ -46,7 +46,7 @@ const project = [
     live:"https://libb.vercel.app/",
     github:"https://github.com/akashpatelknit/lib",
     image: [],
-    decs: '',
+    decs: 'The library website is a comprehensive online platform built using React.js for the frontend, Node.js and Express.js for the backend, and MongoDB for the database. It allows users to create accounts, upload study materials, and download them for their educational needs.The website offers a user-friendly interface where users can easily sign up and create their personal accounts. Upon successful registration, users gain access to their personalized dashboard, which serves as a centralized hub for managing their study materials.',
   },
 ];
 

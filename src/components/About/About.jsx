@@ -9,7 +9,12 @@ import {
 import React from 'react';
 
 const Founder = () => (
-  <Stack direction={['column']} spacing={['4', '16']} padding={'8'}>
+  <Stack
+    direction={['column']}
+    spacing={['4', '16']}
+    padding={'8'}
+    height={'80vh'}
+  >
     <VStack>
       <Avatar
         src="https://avatars.githubusercontent.com/u/86844027?s=400&u=8ce2530eb94b6f75ba6725e80f94194e3960dcec&v=4"
@@ -35,14 +40,15 @@ const About = () => {
       padding="6"
       boxShadow={'lg'}
       marginTop={'2rem'}
+      width={['', '2xl']}
+      m={'auto'}
     >
-      <Heading children="About Me" textAlign={['center', 'left']} />
+      <Heading children="About Me" textAlign={['center', 'center']} />
       <Founder />
       <Stack
         m=""
         direction={['column', 'row']}
         alignItems="center"
-        height={['10vh', '80vh']}
       ></Stack>
     </Container>
   );
