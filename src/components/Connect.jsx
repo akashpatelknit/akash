@@ -18,11 +18,12 @@ const Connect = ({ flag }) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [display, setDisplay] = useState('');
+  const [loading ,setLoading]=useState(false)
   const form = useRef();
   const nevigate = useNavigate();
   const sendEmail = e => {
     e.preventDefault();
-
+    setLoading(true)
     emailjs
       .sendForm(
         'service_ykgugju',
@@ -33,6 +34,10 @@ const Connect = ({ flag }) => {
       .then(
         result => {
           setDisplay('Your message has been sended successfully');
+          setLoading(false)
+          setEmail("");
+          setMessage("");
+          setName("");
           nevigate('/');
         },
         error => {
@@ -68,10 +73,10 @@ const Connect = ({ flag }) => {
                 <Heading as="h2" size="lg" mb={2}>
                   Backend Developer
                 </Heading>
-                <Text color="gray.500" mb={2}>
+                <Text  mb={2}>
                   Onthemove | January 2023 - Present
                 </Text>
-                <Text>
+                <Text color="gray.500" fontSize={['lg', 'xl']}>
                   I am currently employed at onthemove as a backend developer,
                   utilizing JavaScript, NodeJS, and ExpressJS. In my role, I am
                   responsible for implementing new modules into the website and
@@ -154,9 +159,9 @@ const Connect = ({ flag }) => {
                   type="submit"
                   onClick={sendEmail}
                 >
-                  Send Mail
+                 {loading?"Sending...":"Send Mail"}
                 </Button>
-                <text>{display}</text>
+               
               </form>
             </Stack>
           </HStack>

@@ -45,8 +45,7 @@ export default class Testimonial extends Component {
                   fontSize={['lg', 'xl']}
                   color={'#8D8D8D'}
                   padding={['3', '']}
-                  children="
-Akash was hired as a backend developer at onethemove.life. We were extremely satisfied with his work. His contributions greatly enhanced our project. Akash's skills and dedication made a significant impact on our team's success."
+                  children="Akash was hired as a backend developer at onethemove.life. We were extremely satisfied with his work. His contributions greatly enhanced our project. Akash's skills and dedication made a significant impact on our team's success."
                 />
                 <Heading
                   textAlign={['center', '']}

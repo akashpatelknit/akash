@@ -33,6 +33,11 @@ const Connect = ({ flag }) => {
       .then(
         result => {
           setDisplay('Your message has been sended successfully');
+          setLoading(false)
+          setEmail("");
+          setMessage("");
+          setName("");
+          nevigate('/');
           nevigate('/');
         },
         error => {

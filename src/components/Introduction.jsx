@@ -12,7 +12,7 @@ const Introduction = () => {
   return (
     <>
       <VStack
-        width={['', '4xl']}
+        // width={['', '4xl']}
         alignItems={['center', 'center']}
         margin={'auto'}
         spacing={['7', '4']}
@@ -41,7 +41,7 @@ const Introduction = () => {
           textAlign={'center'}
           children="Hi, I'm Akash Patel."
           size={['lg', '3xl']}
-          marginBottom={['-1.8rem', '.2rem']}
+          marginBottom={['-1.8rem', '-3.5']}
           data-aos="fade-left"
         />
         <Heading
