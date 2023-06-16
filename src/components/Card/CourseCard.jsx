@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import {
   Heading,
   VStack,
@@ -31,18 +31,25 @@ import {
 } from '../animations/TechStack/photos/index';
 import ProjectCarosal from '../All Projects/ProjectCarosal';
 import project from './data';
-const CourseCard = ({ title}) => {
-  let data = project.filter(d=>d.title===title)[0];
-  let image=[]
+
+const CourseCard = ({ title }) => {
+  let data = project.filter(d => d.title === title)[0];
+  let image = [];
   if (title === 'Netflix Clone') {
     image = [react, postman, gitHub, javascript, vscode, scss];
-  } else if (title === 'Onthemove') {
+  } else if (title === 'Onthemove(intern)') {
     image = [html, gitHub, javascript, nodejs];
   } else if (title === 'Weather App') {
     image = [react, gitHub, javascript, vscode];
   } else if (title === 'My Library') {
     image = [react, gitHub, javascript, mongodb];
+  } else if (title === 'TalkTime') {
+    image = [react, gitHub, javascript, mongodb];
   }
+   else if (title === 'LinkUp') {
+    image = [react, gitHub, javascript, mongodb];
+  }
+
   const OverlayTwo = () => (
     <ModalOverlay
       bg="none"
@@ -54,9 +61,7 @@ const CourseCard = ({ title}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [overlay, setOverlay] = React.useState(<OverlayTwo />);
   return (
-    <Stack
-    
-    >
+    <Stack>
       <VStack
         className="course"
         alignItems={['center', 'center']}
@@ -69,7 +74,6 @@ const CourseCard = ({ title}) => {
           onOpen();
           setOverlay(<OverlayTwo />);
         }}
-        
       >
         <Box
           borderRadius={'1.5rem'}
@@ -125,24 +129,15 @@ const CourseCard = ({ title}) => {
         </Box>
       </VStack>
 
-      
-      <Modal  isOpen={isOpen} onClose={onClose} size={['sm', '3xl'] }
-      
-      
-      
-      >
+      <Modal isOpen={isOpen} onClose={onClose} size={['sm', '3xl']}>
         {overlay}
-        <ModalContent >
+        <ModalContent>
           <ModalCloseButton />
-          <ModalBody mt={['1rem','1rem']}  >
-            <Stack 
-            padding={'1rem'}
-            
-            >
-
-            <ProjectCarosal poster={data.image} />
+          <ModalBody mt={['1rem', '1rem']}>
+            <Stack padding={'1rem'}>
+              <ProjectCarosal poster={data.image} />
             </Stack>
-            
+
             <Stack
               direction={['column']}
               height="100%"
@@ -153,16 +148,15 @@ const CourseCard = ({ title}) => {
               marginTop={['12rem', '0rem']}
             >
               <Stack
-              direction={['column','row']}
-               marginTop={['-10rem', '3rem']}
-               alignItems={'center'}
-               justifyContent={'center'}
+                direction={['column', 'row']}
+                marginTop={['-10rem', '3rem']}
+                alignItems={'center'}
+                justifyContent={'center'}
               >
                 <VStack
                   width={'full'}
                   alignItems={['center', 'start']}
                   spacing={['3', '7']}
-                 
                 >
                   <Heading
                     textAlign={'start'}
@@ -174,8 +168,7 @@ const CourseCard = ({ title}) => {
                   <Text
                     fontSize={['lg', 'md']}
                     width={['300px', '510px']}
-                    textAlign={['center','start']}
-                    
+                    textAlign={['center', 'start']}
                     children={data.decs}
                   />
 
@@ -186,20 +179,12 @@ const CourseCard = ({ title}) => {
                     marginTop={['-10rem', '5rem']}
                   >
                     <HStack>
-                      <a
-                        href={data.live}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
+                      <a href={data.live} target="_blank" rel="noreferrer">
                         <Button colorScheme="linkedin" minW={['', '40']}>
                           Live Link
                         </Button>
                       </a>
-                      <a
-                        href={data.github}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
+                      <a href={data.github} target="_blank" rel="noreferrer">
                         <Button
                           colorScheme="linkedin"
                           minW={['', '40']}
@@ -220,7 +205,6 @@ const CourseCard = ({ title}) => {
                 />
               </Stack>
             </Stack>
-          
           </ModalBody>
           <ModalFooter>
             <Button onClick={onClose}>Close</Button>
