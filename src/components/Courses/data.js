@@ -1,10 +1,21 @@
 const project = [
   {
-    src: 'https://onix-systems.com/_next/image?url=https%3A%2F%2Fcdn.onix-systems.com%2Fstatic%2Fimages%2FPages%2FFitnessApp%2Frunning_woman.gif&w=640&q=75',
-    title: 'Onthemove',
+    src: 'https://cdn.dribbble.com/users/686119/screenshots/2435023/untitled.gif',
+    title: 'My Library',
+    colour: 'black',
+    link: '/lib',
+  },
+  {
+    src: '',
+    title: 'TalkTime',
+    colour: 'black',
+    link: '/talktime',
+  },
+  {
+    src: 'https://i.pinimg.com/originals/92/b5/52/92b552b499546e66a01494431516e18a.gif',
+    title: 'Onthemove(intern)',
     colour: 'black',
     link: '/otm',
-    
   },
   {
     src: 'https://i.pinimg.com/originals/25/ae/6c/25ae6c3bbc39e96c2948e863e6fe61c4.gif',
@@ -18,12 +29,6 @@ const project = [
     colour: 'black',
     link: '/weather',
   },
-  {
-    src: 'https://cdn.dribbble.com/users/686119/screenshots/2435023/untitled.gif',
-    title: 'My Library',
-    colour: 'black',
-    link: '/lib',
-  }
 ];
 
 export default project;

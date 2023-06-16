@@ -29,11 +29,11 @@ const Courses = () => {
             },
           }}
         >
-          {categories.map((item, index) => (
+          {/* {categories.map((item, index) => (
             <Button key={index} minW={['20', '40']} ml={['','16rem']}>
               <Text children={item} textAlign={'center'} />
             </Button>
-          ))}
+          ))} */}
         </HStack>
         <Stack textAlign={'center'}>
           <Grid
