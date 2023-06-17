@@ -7,6 +7,7 @@ import {
   AiFillTwitterCircle,
 } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import newCV from "./newCV.pdf"
 import Typewriter from 'typewriter-effect';
 const Introduction = () => {
   return (
@@ -89,7 +90,7 @@ const Introduction = () => {
           </Link>
           <Link
             to={
-              'https://drive.google.com/file/d/1HJnWjKn2c2RgCIic4EK_YzdkNau8fV3K/view?usp=share_link'
+              newCV
             }
             target="_blank"
           >
