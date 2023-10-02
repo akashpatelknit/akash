@@ -27,7 +27,7 @@ const Founder = () => (
       <Heading children="Akash Patel" size={['md', 'xl']} />
       <Text
         textAlign={['center', 'left']}
-        children="I'm a Full Stack Developer and Programmer who enjoys turning problems and opportunities into simple interface through design and code."
+        children="I'm a Full Stack Developer and Programmer who enjoys turning problems and opportunities into simple interface through design and code.."
       />
     </VStack>
   </Stack>
