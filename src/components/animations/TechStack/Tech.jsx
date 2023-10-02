@@ -19,7 +19,7 @@ import {
   vscode,
   postman,
 } from './photos/index';
-import { Grid, GridItem, HStack, VStack } from '@chakra-ui/react';
+import { Grid, HStack } from '@chakra-ui/react';
 const icon = [
   css,
   git,
