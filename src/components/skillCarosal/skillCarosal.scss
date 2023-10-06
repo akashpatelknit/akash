@@ -1,0 +1,16 @@
+.skill_carosal {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+  > img {
+    width: 10%;
+  }
+  .skill{
+    display: flex;
+    justify-content: flex-start;
+  }
+}

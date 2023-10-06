@@ -1,0 +1,62 @@
+.intro {
+  background: linear-gradient(90deg, #eef7fb 0% 50%, #c6e5f3 0% 100%);
+  min-height: 500px;
+  max-height: 1200px;
+  height: 570px;
+  width: 100%;
+  border-radius: 10px;
+  .description_20 {
+    text-align: center;
+    font-size: 35px;
+  }
+}
+// @media screen and (max-width: 1536px) {
+// }
+@media screen and (max-width: 1280px) {
+  .intro {
+    height: 600px;
+    .description_20 {
+      font-size: 35px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .intro {
+    height: 630px;
+    .description_20 {
+      font-size: 35px;
+    }
+  }
+}
+@media screen and (max-width: 820px) {
+  .intro {
+    height: 650px;
+    .description_20 {
+      font-size: 35px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro {
+    height: 659px;
+    .description_20 {
+      font-size: 35px;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .intro {
+    height: 530px;
+    .description_20 {
+      font-size: 25px;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .intro {
+    height: 500px;
+    .description_20 {
+      font-size: 20px;
+    }
+  }
+}

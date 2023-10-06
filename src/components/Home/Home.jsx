@@ -1,45 +1,29 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import React, { useEffect} from 'react';
-import { Stack,Heading } from '@chakra-ui/react';
+import React, { useEffect } from 'react';
+import { Stack } from '@chakra-ui/react';
 import './home.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Testimonial from '../Testomonial/Testimonial';
-import Freelance from '../Freelance';
 import Introduction from '../Introduction';
 import Projects from '../Projects';
-import ThingsIDo from '../ThingsIDo';
 import Connect from '../Connect';
+import SkillCarosal from '../skillCarosal/SkillCarosal';
+import AboutMyself from '../AboutMe/AboutMyself';
+import Footer from '../Layout/Footer/Footer';
 const Home = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
   return (
     <section className="home">
       <div className="container">
-        <Freelance />
-        <Stack direction={['column']} height="100%" spacing={['16', '6rem']}>
+        <Stack direction={['column']} position={'relative'}>
           <Introduction />
-          {/**************** * PROJECTS ********************************/}
-
+          <SkillCarosal />
           <Projects />
-          {/***********************************************************/}
-
-          {/***************************THINGS I DO***************************/}
-          <ThingsIDo />
-          <Stack
-            // 
-            borderRadius={'1rem'}
-          >
-            <Heading children="Testimonials" textAlign={'center'}/>
-            <Testimonial />
-          </Stack>
-          {/* Contact************************************************** */}
-
-          <Connect flag={true}/>
-          {/**************services************************ */}
-
-          {/***********************************************************/}
+          <AboutMyself />
+          <Connect flag={true} />
         </Stack>
       </div>
     </section>

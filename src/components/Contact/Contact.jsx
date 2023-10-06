@@ -12,17 +12,18 @@ import {
   Textarea,
   Heading,
 } from '@chakra-ui/react';
+
 const Connect = ({ flag }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [display, setDisplay] = useState('');
-  const [loading ,setLoading]=useState(false)
+  const [loading, setLoading] = useState(false);
   const form = useRef();
   const nevigate = useNavigate();
   const sendEmail = e => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
     emailjs
       .sendForm(
         'service_ykgugju',
@@ -33,10 +34,10 @@ const Connect = ({ flag }) => {
       .then(
         result => {
           setDisplay('Your message has been sended successfully');
-          setLoading(false)
-          setEmail("");
-          setMessage("");
-          setName("");
+          setLoading(false);
+          setEmail('');
+          setMessage('');
+          setName('');
           nevigate('/');
           nevigate('/');
         },
@@ -46,16 +47,15 @@ const Connect = ({ flag }) => {
       );
   };
   return (
-    <>
+    <div className="container">
       <Stack
         direction={['column', 'row']}
         w={'full'}
         m={'auto'}
-       justifyContent={'center'}
-       alignItems={'center'}
-        height={'80vh'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        // height={'81vh'}
       >
-        
         <VStack
           alignItems={'center'}
           width={'full'}
@@ -63,11 +63,7 @@ const Connect = ({ flag }) => {
           borderTopLeftRadius={['0', '0']}
         >
           <Heading children="Contact" padding={'2'} />
-          <HStack
-            borderRadius={'1rem'}
-            borderTopLeftRadius={['', '0']}
-            // boxShadow="rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
-          >
+          <HStack borderRadius={'1rem'} borderTopLeftRadius={['', '0']}>
             <Stack
               spacing={3}
               // border={'1px'}
@@ -123,7 +119,7 @@ const Connect = ({ flag }) => {
                   type="submit"
                   onClick={sendEmail}
                 >
-                  {loading?"Sending...":"Send Mail"}
+                  {loading ? 'Sending...' : 'Send Mail'}
                 </Button>
                 <text>{display}</text>
               </form>
@@ -131,7 +127,7 @@ const Connect = ({ flag }) => {
           </HStack>
         </VStack>
       </Stack>
-    </>
+    </div>
   );
 };
 

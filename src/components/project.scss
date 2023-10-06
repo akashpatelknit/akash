@@ -1,0 +1,59 @@
+.textContainer {
+  width: 70%;
+  margin: auto;
+  // margin-top: 200px;
+  .description_20 {
+    font-size: 25px;
+  }
+}
+
+.project_bg {
+  background: linear-gradient(118deg, #eef7fb 0% 60%, #d8e4e9 0% 100%);
+  min-height: 450px;
+  max-height: 1200px;
+  width: 100%;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 20px;
+  .projectCarosal {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .textContainer {
+    .description_20 {
+      font-size: 25px;
+    }
+  }
+}
+@media screen and (max-width: 820px) {
+  .textContainer {
+    .description_20 {
+      font-size: 25px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .textContainer {
+    width: 75%;
+
+    .description_20 {
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .textContainer {
+    .description_20 {
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .textContainer {
+    .description_20 {
+      font-size: 20px;
+    }
+  }
+}
