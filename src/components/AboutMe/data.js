@@ -27,20 +27,20 @@ const data = [
   },
   {
     id: 4,
-    skill_name: 'Tools',
+    skill_name: ['Tools'],
     img: 'https://edubaba-org.vercel.app/fourth.svg',
     skills: ['GIT and Github', 'Chrome Dev Tools', 'Postman', 'VS Code'],
   },
   {
     id: 5,
-    skill_name: 'CMS',
+    skill_name: ['CMS'],
     img: 'https://edubaba-org.vercel.app/fifth.svg',
     skills: ['Strapi', 'GraphCMS'],
   },
   {
     id: 6,
 
-    skill_name: 'Expertise',
+    skill_name: ['Expertise '],
     img: 'https://edubaba-org.vercel.app/sisxth.svg',
     skills: [
       'MERN Stack Developer',
