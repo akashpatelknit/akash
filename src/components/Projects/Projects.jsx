@@ -1,9 +1,9 @@
 import React from 'react';
 import { Stack, Heading } from '@chakra-ui/react';
 import './project.scss';
-import CourseCard from './Card/CourseCard';
+import CourseCard from '../Card/CourseCard';
 import Slider from 'react-slick';
-import project from '../components/Home/data';
+import project from '../Home/data';
 const Projects = () => {
   const settings = {
     infinite: true,

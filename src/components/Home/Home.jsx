@@ -5,11 +5,10 @@ import './home.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Introduction from '../Introduction';
-import Projects from '../Projects';
 import Connect from '../Connect';
 import SkillCarosal from '../skillCarosal/SkillCarosal';
 import AboutMyself from '../AboutMe/AboutMyself';
-import Footer from '../Layout/Footer/Footer';
+import Projects from '../Projects/Projects';
 const Home = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });

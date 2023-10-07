@@ -13,7 +13,6 @@ import {
   Text,
   Heading,
 } from '@chakra-ui/react';
-import Footer from './Layout/Footer/Footer';
 const Connect = ({ flag }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -76,7 +75,7 @@ const Connect = ({ flag }) => {
                   </Heading>
                   <Text mb={2}>Onthemove | January 2023 - Present</Text>
                   <Text color="gray.500" fontSize={['lg', 'xl']}>
-                    I am currently employed at onthemove as a backend developer,
+                    I have done internship at onthemove as a backend developer,
                     utilizing JavaScript, NodeJS, and ExpressJS. In my role, I
                     am responsible for implementing new modules into the website
                     and resolving any bugs that arise. I actively contribute to
