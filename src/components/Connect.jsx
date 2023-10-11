@@ -157,7 +157,6 @@ const Connect = ({ flag }) => {
             </Box>
           </VStack>
         </Stack>
-    
       </div>
     </>
   );

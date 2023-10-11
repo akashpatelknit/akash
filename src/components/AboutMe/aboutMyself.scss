@@ -5,6 +5,15 @@
   margin: auto;
   margin-top: 30px;
   .about_text_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .project_buttons {
+      display: flex;
+      gap: 1rem;
+      width: fit-content;
+      align-items: center;
+    }
     > h1 {
       font-size: 3rem;
       font-weight: bold;
@@ -105,7 +114,6 @@
       gap: 1rem;
 
       .div {
-    
         border-radius: 10px;
         height: 50px;
         width: 50px;
@@ -214,23 +222,6 @@
 @media screen and (max-width: 768px) {
   .about_cards {
     width: 75%;
-    gap: 1rem;
-    .about_left_card {
-      grid-template-columns: 1fr 1fr;
-      width: 70%;
-      .left_card_item {
-        height: 160px;
-        width: 140px;
-      }
-    }
-    .about_right_card {
-      width: 30%;
-      height: 510px;
-      width: 273px;
-      F .right_card_text {
-        margin-left: 15px;
-      }
-    }
   }
 }
 @media screen and (max-width: 576px) {
@@ -271,9 +262,13 @@
   }
 }
 @media screen and (max-width: 465px) {
+  .about_myself {
+    .about_text_container {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+  }
   .about_cards {
-    width: 85%;
-    gap: 1rem;
     .about_left_card {
       display: none;
     }
@@ -281,19 +276,11 @@
       width: 100%;
       margin: auto;
       .right_card_text {
-        margin-left: 10px;
-        > h3 {
-          font-size: 20px;
-        }
         > h1 {
           font-size: 35px;
-          font-weight: bold;
         }
         > ul {
-          margin-left: 30px;
-
           > li {
-            margin-top: 5px;
             font-size: 20px;
           }
         }
